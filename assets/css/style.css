@@ -25,6 +25,17 @@
     --gray-100: #f3f4f6;
     --white: #ffffff;
     
+    /* Layout & Spacing */
+    --container-padding: 2rem;
+    --section-spacing: 6rem;
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Clash Display', 'Inter', sans-serif;
+    
+    /* Transitions & Shadows */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
     /* Glassmorphism - Updated */
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(249, 115, 22, 0.15);
