@@ -30,8 +30,8 @@
     <link rel="canonical" href="https://www.mrfixon.com/contact.html">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
-    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,8 +50,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -79,8 +79,558 @@
             }
         }
     }
-    </script>
+</script>
+    <style>
+        .quick-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
+        .quick-contact-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .quick-contact-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(249, 115, 22, 0.1);
+        }
+
+        .quick-contact-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .quick-contact-item .label {
+            display: block;
+            color: var(--gray-400);
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .quick-contact-item .value {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .contact-info-side {
+            flex: 1;
+        }
+
+        .contact-info-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2.5rem;
+            height: 100%;
+        }
+
+        .contact-info-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card h2 span {
+            color: var(--primary);
+        }
+
+        .info-subtitle {
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+        }
+
+        .contact-form-side {
+            flex: 1.5;
+        }
+
+        .contact-form-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2.5rem;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .form-header p {
+            color: var(--gray-400);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .floating-label {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .floating-label input,
+        .floating-label textarea,
+        .floating-label select {
+            width: 100%;
+            padding: 1rem 0.8rem 0.5rem 0.8rem;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--glass-border);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-label textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .floating-label select {
+            cursor: pointer;
+            appearance: none;
+            background: transparent;
+        }
+
+        .floating-label select option {
+            background: var(--dark-light);
+            color: white;
+        }
+
+        .floating-label label {
+            position: absolute;
+            left: 0.8rem;
+            top: 0.8rem;
+            color: var(--gray-500);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-label input:focus ~ label,
+        .floating-label input:not(:placeholder-shown) ~ label,
+        .floating-label textarea:focus ~ label,
+        .floating-label textarea:not(:placeholder-shown) ~ label,
+        .floating-label select:focus ~ label,
+        .floating-label select:has(option:checked:not([value=""])) ~ label {
+            top: -0.5rem;
+            left: 0;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+
+        .floating-label input:focus,
+        .floating-label textarea:focus,
+        .floating-label select:focus {
+            border-bottom-color: var(--primary);
+        }
+
+        .file-upload {
+            margin: 1.5rem 0;
+        }
+
+        .file-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border: 2px dashed var(--glass-border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-label:hover {
+            border-color: var(--primary);
+            background: rgba(249, 115, 22, 0.05);
+        }
+
+        .file-label i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .file-label span {
+            color: white;
+            font-weight: 500;
+        }
+
+        .file-info {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 0.3rem;
+        }
+
+        #fileUpload {
+            display: none;
+        }
+
+        .budget-range,
+        .contact-method {
+            margin: 1.5rem 0;
+        }
+
+        .budget-range label,
+        .contact-method label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .range-options,
+        .method-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .range-option,
+        .method-option {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .range-option:hover,
+        .method-option:hover {
+            border-color: var(--primary);
+        }
+
+        .range-option input,
+        .method-option input {
+            display: none;
+        }
+
+        .range-option span,
+        .method-option span {
+            color: var(--gray-300);
+        }
+
+        .range-option input:checked + span,
+        .method-option input:checked + span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .method-option i {
+            color: var(--primary);
+        }
+
+        .simple-captcha {
+            margin: 1.5rem 0;
+        }
+
+        .simple-captcha label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .captcha-input {
+            position: relative;
+        }
+
+        .captcha-input input {
+            width: 100px;
+            padding: 0.8rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .captcha-hint {
+            position: absolute;
+            left: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        #submitBtn {
+            width: 100%;
+            height: 52px;
+            max-height: 52px;
+            padding: 0 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            border-radius: 50px;
+            margin-top: 1.5rem;
+            background: var(--gradient-primary);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        #submitBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.45);
+        }
+
+        #submitBtn:disabled {
+            opacity: 0.75;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .business-status {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border-radius: 50px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        .status-text {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .map-wrapper {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            height: 450px;
+        }
+
+        #mapContainer {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .map-overlay-card {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            max-width: 300px;
+            z-index: 2;
+        }
+
+        .map-overlay-card h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-overlay-card p {
+            color: var(--gray-300);
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .map-overlay-card i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .custom-map-marker i {
+            color: var(--primary);
+            font-size: 2.5rem;
+            filter: drop-shadow(0 4px 10px rgba(249, 115, 22, 0.5));
+        }
+
+        .team-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .team-contact-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-contact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .team-contact-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
+        .team-contact-card h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-contact-card p {
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .team-contact-card a {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 0.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .team-contact-card a:hover {
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 1200px) {
+            .quick-contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .captcha-hint {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quick-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-overlay-card {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+
+            .map-wrapper {
+                height: auto;
+            }
+
+            #mapContainer {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-card,
+            .contact-form-card {
+                padding: 1.5rem;
+            }
+
+            .range-options,
+            .method-options {
+                flex-direction: column;
+            }
+
+            .range-option,
+            .method-option {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -92,7 +642,7 @@
     <div class="nav-container">
         <a href="index.html" class="nav-logo">
             <!-- Replace with your actual logo path -->
-            <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+            <img src="assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
         </a>
         
         <div class="nav-menu">
@@ -288,15 +838,15 @@
                                     </div>
                                     
                                     <div class="floating-label">
-                                        <input type="email" name="email" id="email" placeholder=" " required>
-                                        <label for="email">Email Address *</label>
+                                        <input type="email" name="email" id="email" placeholder=" ">
+                                        <label for="email">Email Address</label>
                                     </div>
                                 </div>
                                 
                                 <div class="form-row">
                                     <div class="floating-label">
-                                        <input type="tel" name="phone" id="phone" placeholder=" ">
-                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" name="phone" id="phone" placeholder=" " required>
+                                        <label for="phone">Phone Number *</label>
                                     </div>
                                     
                                     <div class="floating-label">
@@ -383,8 +933,8 @@
                                     </div>
                                 </div>
                                 
-                                <button type="submit" class="btn-primary btn-large w-full" id="submitBtn">
-                                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+                                <button type="submit" class="btn-primary" id="submitBtn">
+                                    <span>Send Message</span> <i class="fas fa-paper-plane"></i>
                                 </button>
                                 
                                 <div id="formMessage" class="form-message"></div>
@@ -556,7 +1106,7 @@
             <div class="footer-info">
                 <a href="index.html" class="footer-logo">
                     <!-- Replace with your actual logo path -->
-                    <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                    <img src="assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
                 </a>
                 <p class="footer-description">
                     India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
@@ -630,10 +1180,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <!-- Custom JS -->
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/animations.js"></script>
-    <script src="/assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/contact.js"></script>
     
     <script>
         AOS.init({
@@ -764,534 +1317,5 @@
             }
         });
     </script>
-
-    <style>
-        .quick-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .quick-contact-item {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .quick-contact-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            background: rgba(0, 180, 216, 0.1);
-        }
-
-        .quick-contact-item i {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        .quick-contact-item .label {
-            display: block;
-            color: var(--gray-400);
-            font-size: 0.8rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .quick-contact-item .value {
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .contact-info-side {
-            flex: 1;
-        }
-
-        .contact-info-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            padding: 2.5rem;
-            height: 100%;
-        }
-
-        .contact-info-card h2 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info-card h2 span {
-            color: var(--primary);
-        }
-
-        .info-subtitle {
-            color: var(--gray-400);
-            margin-bottom: 2rem;
-        }
-
-        .contact-form-side {
-            flex: 1.5;
-        }
-
-        .contact-form-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            padding: 2.5rem;
-        }
-
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .form-header h3 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-
-        .form-header p {
-            color: var(--gray-400);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .floating-label {
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .floating-label input,
-        .floating-label textarea,
-        .floating-label select {
-            width: 100%;
-            padding: 1rem 0.8rem 0.5rem 0.8rem;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid var(--glass-border);
-            color: white;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .floating-label textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .floating-label select {
-            cursor: pointer;
-            appearance: none;
-            background: transparent;
-        }
-
-        .floating-label select option {
-            background: var(--dark-light);
-            color: white;
-        }
-
-        .floating-label label {
-            position: absolute;
-            left: 0.8rem;
-            top: 0.8rem;
-            color: var(--gray-500);
-            pointer-events: none;
-            transition: all 0.3s ease;
-        }
-
-        .floating-label input:focus ~ label,
-        .floating-label input:not(:placeholder-shown) ~ label,
-        .floating-label textarea:focus ~ label,
-        .floating-label textarea:not(:placeholder-shown) ~ label,
-        .floating-label select:focus ~ label,
-        .floating-label select:has(option:checked:not([value=""])) ~ label {
-            top: -0.5rem;
-            left: 0;
-            font-size: 0.8rem;
-            color: var(--primary);
-        }
-
-        .floating-label input:focus,
-        .floating-label textarea:focus,
-        .floating-label select:focus {
-            border-bottom-color: var(--primary);
-        }
-
-        .file-upload {
-            margin: 1.5rem 0;
-        }
-
-        .file-label {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            background: var(--glass-bg);
-            border: 2px dashed var(--glass-border);
-            border-radius: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .file-label:hover {
-            border-color: var(--primary);
-            background: rgba(0, 180, 216, 0.05);
-        }
-
-        .file-label i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .file-label span {
-            color: white;
-            font-weight: 500;
-        }
-
-        .file-info {
-            font-size: 0.8rem;
-            color: var(--gray-500);
-            margin-top: 0.3rem;
-        }
-
-        #fileUpload {
-            display: none;
-        }
-
-        .budget-range,
-        .contact-method {
-            margin: 1.5rem 0;
-        }
-
-        .budget-range label,
-        .contact-method label {
-            display: block;
-            color: white;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-        }
-
-        .range-options,
-        .method-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .range-option,
-        .method-option {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .range-option:hover,
-        .method-option:hover {
-            border-color: var(--primary);
-        }
-
-        .range-option input,
-        .method-option input {
-            display: none;
-        }
-
-        .range-option span,
-        .method-option span {
-            color: var(--gray-300);
-        }
-
-        .range-option input:checked + span,
-        .method-option input:checked + span {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .method-option i {
-            color: var(--primary);
-        }
-
-        .simple-captcha {
-            margin: 1.5rem 0;
-        }
-
-        .simple-captcha label {
-            display: block;
-            color: white;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .captcha-input {
-            position: relative;
-        }
-
-        .captcha-input input {
-            width: 100px;
-            padding: 0.8rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            color: white;
-            font-size: 1rem;
-        }
-
-        .captcha-hint {
-            position: absolute;
-            left: 120px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray-500);
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .form-footer {
-            text-align: center;
-            margin-top: 1.5rem;
-            color: var(--gray-500);
-            font-size: 0.9rem;
-        }
-
-        .form-footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .business-status {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border-radius: 50px;
-        }
-
-        .status-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #10b981;
-            animation: pulse 2s infinite;
-        }
-
-        .status-text {
-            color: white;
-            font-size: 0.9rem;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-            }
-        }
-
-        .map-wrapper {
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
-            height: 450px;
-        }
-
-        #mapContainer {
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .map-overlay-card {
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 1.5rem;
-            max-width: 300px;
-            z-index: 2;
-        }
-
-        .map-overlay-card h4 {
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .map-overlay-card p {
-            color: var(--gray-300);
-            margin-bottom: 0.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .map-overlay-card i {
-            color: var(--primary);
-            width: 20px;
-        }
-
-        .custom-map-marker i {
-            color: var(--primary);
-            font-size: 2.5rem;
-            filter: drop-shadow(0 4px 10px rgba(0, 180, 216, 0.5));
-        }
-
-        .team-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .team-contact-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .team-contact-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
-
-        .team-contact-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-        }
-
-        .team-contact-card h4 {
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-contact-card p {
-            color: var(--gray-400);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .team-contact-card a {
-            display: block;
-            color: var(--primary);
-            text-decoration: none;
-            margin-bottom: 0.3rem;
-            transition: color 0.3s ease;
-        }
-
-        .team-contact-card a:hover {
-            color: white;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 1200px) {
-            .quick-contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .team-contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 992px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .captcha-hint {
-                position: static;
-                transform: none;
-                margin-top: 0.5rem;
-                display: block;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .quick-contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .map-overlay-card {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                max-width: 100%;
-                margin-top: 1rem;
-            }
-
-            .map-wrapper {
-                height: auto;
-            }
-
-            #mapContainer {
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .contact-info-card,
-            .contact-form-card {
-                padding: 1.5rem;
-            }
-
-            .range-options,
-            .method-options {
-                flex-direction: column;
-            }
-
-            .range-option,
-            .method-option {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
 </body>
 </html>

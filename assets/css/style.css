@@ -518,6 +518,22 @@ section {
 }
 
 /* ---------- Buttons ---------- */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(0);
+    animation: rippleAnim 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -2724,4 +2740,16 @@ img.loaded  { opacity: 1; transition: opacity 0.3s ease; }
 /* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 768px) {
     .infrastructure-item.large { aspect-ratio: 16 / 9; }
+}
+
+/* Toast Slide Animation */
+@keyframes slideInToast {
+    from {
+        opacity: 0;
+        transform: translateX(40px) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
 }
