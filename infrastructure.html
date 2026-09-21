@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Infrastructure - Mr. Fixon | State-of-the-Art Manufacturing Facility</title>
+    <meta name="title" content="Infrastructure - Mr. Fixon | State-of-the-Art Manufacturing Facility">
+    <meta name="description" content="Explore Mr. Fixon's 25,000 sq. ft. manufacturing facility in Mumbai. Advanced machinery, quality control labs, and skilled workforce ensuring premium quality products.">
+    <meta name="keywords" content="LED manufacturing facility, acrylic fabrication unit, whiteboard factory, quality control lab, manufacturing infrastructure India">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/infrastructure.html">
+    <meta property="og:title" content="Infrastructure - Mr. Fixon | State-of-the-Art Manufacturing Facility">
+    <meta property="og:description" content="Explore Mr. Fixon's 25,000 sq. ft. manufacturing facility in Mumbai.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/infrastructure-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/infrastructure.html">
+    <meta property="twitter:title" content="Infrastructure - Mr. Fixon | State-of-the-Art Manufacturing Facility">
+    <meta property="twitter:description" content="Explore Mr. Fixon's 25,000 sq. ft. manufacturing facility in Mumbai.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/infrastructure-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/infrastructure.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Mr. Fixon Manufacturing Facility",
+        "description": "25,000 sq. ft. state-of-the-art manufacturing facility in Mumbai",
+        "brand": {
+            "@type": "Brand",
+            "name": "Mr. Fixon"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Mr. Fixon",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mumbai",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+            }
+        }
+    }
+    </script>
+        <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Add these logo sizing rules to your style.css file */
+
+/* Navbar Logo - Fixed Size */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 50px; /* Fixed height container */
+}
+
+.logo-img {
+    height: 40px; /* Fixed height */
+    width: auto;
+    max-width: 150px; /* Maximum width constraint */
+    object-fit: contain;
+    transition: all var(--transition-fast);
+}
+
+.navbar.scrolled .logo-img {
+    height: 35px; /* Slightly smaller when scrolled */
+}
+
+/* Footer Logo - Fixed Size */
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+    height: 45px; /* Slightly larger in footer */
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* Loading Screen Logo - Properly Sized */
+.loading-screen .loader-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading-screen .logo-image {
+    max-width: 250px; /* Maximum width */
+    width: 80%; /* Responsive width */
+    height: auto;
+    max-height: 120px; /* Maximum height constraint */
+    object-fit: contain;
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+/* Mobile Menu Logo (if needed) */
+.mobile-menu .nav-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: auto;
+}
+
+.mobile-menu .logo-img {
+    height: 35px;
+    max-width: 120px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .footer-logo-img {
+        height: 40px;
+        max-width: 150px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 100px;
+    }
+    
+    .footer-logo-img {
+        height: 35px;
+        max-width: 130px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 180px;
+        max-height: 80px;
+    }
+}
+
+/* Animation for loading logo */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        </style>
+</head>
+<body>
+
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <!-- Replace with your actual logo path -->
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+        </a>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="infrastructure.html" class="nav-link active">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="infrastructure.html" class="active">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Our <span>Infrastructure</span></h1>
+                <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Infrastructure</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facility Overview -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content" data-aos="fade-right">
+                        <span class="section-subtitle">Our Facility</span>
+                        <h2 class="section-title">25,000 Sq. Ft. <span>Manufacturing Excellence</span></h2>
+                        <p class="overview-text">
+                            Located in the industrial heart of Mumbai, our state-of-the-art facility is equipped with the latest machinery and technology to deliver premium quality products. With dedicated sections for LED assembly, acrylic fabrication, and whiteboard manufacturing, we ensure efficient production and strict quality control.
+                        </p>
+                        
+                        <div class="facility-stats">
+                            <div class="facility-stat">
+                                <div class="stat-value">25K+</div>
+                                <div class="stat-label">Sq. Ft. Area</div>
+                            </div>
+                            <div class="facility-stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Skilled Workers</div>
+                            </div>
+                            <div class="facility-stat">
+                                <div class="stat-value">7</div>
+                                <div class="stat-label">QC Stages</div>
+                            </div>
+                            <div class="facility-stat">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Operations</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-image" data-aos="fade-left">
+                        <img src="assets/images/our_facility.png" alt="Mr. Fixon Manufacturing Facility">
+                        <div class="image-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>ISO 9001:2015 Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure Blocks -->
+        <section class="infrastructure-showcase section-padding">
+            <div class="container">
+                <!-- Block 1: Manufacturing Unit -->
+                <div class="infrastructure-block">
+                    <div class="block-media" data-aos="fade-right">
+                        <img src="assets/images/led_manufacturing.png" alt="LED Manufacturing Unit">
+                        <div class="media-overlay">
+                            <span class="badge">LED Assembly Line</span>
+                        </div>
+                    </div>
+                    <div class="block-content" data-aos="fade-left">
+                        <h3>LED Manufacturing Unit</h3>
+                        <p>Our LED assembly line features automatic pick-and-place machines, reflow ovens, and aging racks. We produce indoor and outdoor LED displays with precision and consistency.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Automatic Pick & Place Machines</li>
+                            <li><i class="fas fa-check-circle"></i> 10-Zone Reflow Ovens</li>
+                            <li><i class="fas fa-check-circle"></i> 72-Hour Aging Test Racks</li>
+                            <li><i class="fas fa-check-circle"></i> Color Calibration System</li>
+                            <li><i class="fas fa-check-circle"></i> Waterproof Testing Chamber</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 2: Acrylic Fabrication -->
+                <div class="infrastructure-block reverse">
+                    <div class="block-media" data-aos="fade-left">
+                        <img src="assets/images/acrylic_fabrication.png" alt="Acrylic Fabrication Unit">
+                        <div class="media-overlay">
+                            <span class="badge">Acrylic Workshop</span>
+                        </div>
+                    </div>
+                    <div class="block-content" data-aos="fade-right">
+                        <h3>Acrylic Fabrication Unit</h3>
+                        <p>Our acrylic workshop is equipped with laser cutters, CNC routers, and bending machines to create precise, high-quality acrylic products for various applications.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> 150W CO2 Laser Cutters</li>
+                            <li><i class="fas fa-check-circle"></i> 3-Axis CNC Routers</li>
+                            <li><i class="fas fa-check-circle"></i> Strip Heaters & Line Benders</li>
+                            <li><i class="fas fa-check-circle"></i> Polishing & Flame Finishing</li>
+                            <li><i class="fas fa-check-circle"></i> UV Printing System</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 3: Whiteboard Production -->
+                <div class="infrastructure-block">
+                    <div class="block-media" data-aos="fade-right">
+                        <img src="assets/images/whiteboard_production.png" alt="Whiteboard Production Line">
+                        <div class="media-overlay">
+                            <span class="badge">Whiteboard Assembly</span>
+                        </div>
+                    </div>
+                    <div class="block-content" data-aos="fade-left">
+                        <h3>Whiteboard Production Line</h3>
+                        <p>We manufacture premium glass and magnetic whiteboards using automated cutting, tempering, and assembly processes. Our Nano Clean™ technology is applied in controlled environments.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Glass Cutting & Tempering</li>
+                            <li><i class="fas fa-check-circle"></i> Magnetic Steel Lamination</li>
+                            <li><i class="fas fa-check-circle"></i> Nano Clean™ Coating Booth</li>
+                            <li><i class="fas fa-check-circle"></i> Aluminum Frame Fabrication</li>
+                            <li><i class="fas fa-check-circle"></i> Automated Packaging Line</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 4: Quality Control Lab -->
+                <div class="infrastructure-block reverse">
+                    <div class="block-media" data-aos="fade-left">
+                        <img src="assets/images/quality_control.png" alt="Quality Control Laboratory">
+                        <div class="media-overlay">
+                            <span class="badge">QC Laboratory</span>
+                        </div>
+                    </div>
+                    <div class="block-content" data-aos="fade-right">
+                        <h3>Quality Control Laboratory</h3>
+                        <p>Our dedicated QC lab tests every product at 7 different stages. We ensure compliance with international standards through rigorous testing protocols.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Brightness & Colorimeter Testing</li>
+                            <li><i class="fas fa-check-circle"></i> IP Rating Waterproof Testing</li>
+                            <li><i class="fas fa-check-circle"></i> Scratch & Durability Tests</li>
+                            <li><i class="fas fa-check-circle"></i> Environmental Chamber</li>
+                            <li><i class="fas fa-check-circle"></i> Electrical Safety Testing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 5: Warehouse & Logistics -->
+                <div class="infrastructure-block">
+                    <div class="block-media" data-aos="fade-right">
+                        <img src="assets/images/warehouse.png" alt="Warehouse and Logistics">
+                        <div class="media-overlay">
+                            <span class="badge">Warehouse</span>
+                        </div>
+                    </div>
+                    <div class="block-content" data-aos="fade-left">
+                        <h3>Warehouse & Logistics</h3>
+                        <p>Our spacious warehouse ensures safe storage of raw materials and finished products. We use custom packaging solutions to ensure damage-free delivery across India.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> 10,000 Sq. Ft. Storage Area</li>
+                            <li><i class="fas fa-check-circle"></i> Inventory Management System</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Wooden Crating</li>
+                            <li><i class="fas fa-check-circle"></i> Bubble Wrap & Foam Packaging</li>
+                            <li><i class="fas fa-check-circle"></i> Pan-India Shipping Partners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Showcase -->
+        <section class="equipment-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Machinery</span>
+                    <h2 class="section-title">Advanced <span>Equipment</span></h2>
+                </div>
+
+                <div class="equipment-grid">
+                    <div class="equipment-item" data-aos="zoom-in" data-tilt>
+                        <i class="fas fa-robot"></i>
+                        <h4>Pick & Place Machines</h4>
+                        <p>Yamaha YSM20 · 80,000 CPH</p>
+                    </div>
+                    <div class="equipment-item" data-aos="zoom-in" data-aos-delay="50" data-tilt>
+                        <i class="fas fa-fire"></i>
+                        <h4>Reflow Ovens</h4>
+                        <p>10-Zone · Nitrogen Compatible</p>
+                    </div>
+                    <div class="equipment-item" data-aos="zoom-in" data-aos-delay="100" data-tilt>
+                        <i class="fas fa-cut"></i>
+                        <h4>Laser Cutters</h4>
+                        <p>150W CO2 · 1300x900mm</p>
+                    </div>
+                    <div class="equipment-item" data-aos="zoom-in" data-aos-delay="150" data-tilt>
+                        <i class="fas fa-cog"></i>
+                        <h4>CNC Routers</h4>
+                        <p>3-Axis · 1200x2400mm</p>
+                    </div>
+                    <div class="equipment-item" data-aos="zoom-in" data-aos-delay="200" data-tilt>
+                        <i class="fas fa-tint"></i>
+                        <h4>Waterjet Cutters</h4>
+                        <p>60,000 PSI · Precision Cutting</p>
+                    </div>
+                    <div class="equipment-item" data-aos="zoom-in" data-aos-delay="250" data-tilt>
+                        <i class="fas fa-thermometer-half"></i>
+                        <h4>Tempering Furnace</h4>
+                        <p>Glass Tempering · 700°C</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Process -->
+        <section class="quality-process section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">7-Stage QC</span>
+                    <h2 class="section-title">Our Quality <span>Process</span></h2>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-step-card" data-aos="fade-up">
+                        <div class="step-number">01</div>
+                        <h4>Incoming Inspection</h4>
+                        <p>All raw materials tested before acceptance</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="step-number">02</div>
+                        <h4>In-Process QC</h4>
+                        <p>Continuous monitoring during production</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">03</div>
+                        <h4>Visual Inspection</h4>
+                        <p>100% visual check for defects</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="step-number">04</div>
+                        <h4>Functional Testing</h4>
+                        <p>Performance verification under load</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">05</div>
+                        <h4>Aging Test</h4>
+                        <p>72-hour continuous operation test</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="step-number">06</div>
+                        <h4>Environmental Test</h4>
+                        <p>Temperature & humidity cycling</p>
+                    </div>
+                    <div class="process-step-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">07</div>
+                        <h4>Final Inspection</h4>
+                        <p>Pre-shipping quality check</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">Visit Our Facility</h2>
+                    <p class="cta-text">See our infrastructure in person. Schedule a factory visit today.</p>
+                    <a href="contact.html" class="btn-primary btn-large">
+                        Schedule Visit <i class="fas fa-calendar-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo">
+                    <!-- Replace with your actual logo path -->
+                    <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                </a>
+                <p class="footer-description">
+                    India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html?category=led">LED Displays</a></li>
+                    <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                    <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                    <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                    <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-cyan-400"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.1.5/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+            offset: 50
+        });
+    </script>
+
+    <style>
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .overview-text {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            line-height: 1.8;
+            margin: 2rem 0;
+        }
+        
+        .facility-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .facility-stat {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+        }
+        
+        .overview-image {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        
+        .overview-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-badge {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: white;
+        }
+        
+        .image-badge i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .infrastructure-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .infrastructure-block.reverse {
+            direction: rtl;
+        }
+        
+        .infrastructure-block.reverse .block-content {
+            direction: ltr;
+        }
+        
+        .block-media {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .block-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .block-media:hover img {
+            transform: scale(1.05);
+        }
+        
+        .media-overlay {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+        }
+        
+        .badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .block-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .block-content p {
+            color: var(--gray-400);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gray-300);
+        }
+        
+        .feature-list i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .equipment-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .equipment-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .equipment-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .equipment-item p {
+            color: var(--gray-400);
+            font-size: 0.8rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1rem;
+        }
+        
+        .process-step-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .process-step-card::after {
+            content: '→';
+            position: absolute;
+            top: 50%;
+            right: -0.8rem;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .process-step-card:last-child::after {
+            display: none;
+        }
+        
+        .step-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            opacity: 0.3;
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-step-card h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .process-step-card p {
+            color: var(--gray-400);
+            font-size: 0.8rem;
+        }
+        
+        .virtual-tour {
+            padding: 4rem 0;
+        }
+        
+        .tour-card {
+            background: var(--gradient-primary);
+            border-radius: 40px;
+            padding: 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tour-card i {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tour-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .tour-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .tour-card .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .tour-card .btn-primary:hover {
+            background: var(--dark);
+            color: white;
+        }
+        
+        @media (max-width: 1200px) {
+            .equipment-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .overview-grid,
+            .infrastructure-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .infrastructure-block.reverse {
+                direction: ltr;
+            }
+            
+            .facility-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-step-card::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tour-card {
+                padding: 2rem;
+            }
+            
+            .tour-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .facility-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .block-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

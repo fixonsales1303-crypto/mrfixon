@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions Since 1996</title>
+    <meta name="title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions Since 1996">
+    <meta name="description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards. 30+ years of excellence serving 5000+ happy clients across India.">
+    <meta name="keywords" content="LED displays, acrylic products, whiteboards, signage solutions, digital signage, glass whiteboards, LED screens, acrylic stands, Mumbai, India">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/">
+    <meta property="og:title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="og:description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/">
+    <meta property="twitter:title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="twitter:description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mr. Fixon",
+        "url": "https://www.mrfixon.com",
+        "logo": "https://www.mrfixon.com/assets/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/mrfixon",
+            "https://www.instagram.com/mrfixon",
+            "https://www.linkedin.com/company/mrfixon",
+            "https://www.youtube.com/mrfixon"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8384858678",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+        },
+        "foundingDate": "1996",
+        "founder": {
+            "@type": "Person",
+            "name": "Bechar Patel"
+        },
+        "description": "India's leading manufacturer of LED displays, acrylic products, and premium whiteboards.",
+        "keywords": "LED displays, acrylic products, whiteboards, signage solutions"
+    }
+    </script>
+
+    <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Logo sizing rules */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 50px;
+        }
+
+        /* ===========================================
+   Mr. Fixon - Image Display Fix v3
+   
+   GOAL: Show full image (no cropping).
+   White fills left/right or top/bottom gaps.
+   Container always fills its grid column fully.
+   =========================================== */
+
+/* ── Override the inline `img { object-fit:cover }` 
+   that lives inside each HTML file's <style> block ── */
+.product-image-container img,
+.product-slide-image img,
+.product-card .product-image-container img,
+.product-image img,
+.gallery-item img,
+.blog-image img,
+.project-image img,
+.infrastructure-item img,
+.team-image img,
+.intro-image img,
+.featured-media img,
+.modal-image img {
+    object-fit: contain !important;   /* show full image, no cropping */
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #ffffff;              /* white fills any unused space */
+    padding: 0 !important;
+    transition: transform 0.5s ease;
+}
+
+/* ── Containers: always stretch to fill column width ── */
+.product-image-container,
+.product-slide-image,
+.product-card .product-image-container,
+.product-image {
+    width: 100%;                      /* fill full card width — no right gap */
+    aspect-ratio: 4 / 3;             /* consistent frame (wider than square = less white) */
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+.blog-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.infrastructure-item {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.infrastructure-item.large {
+    aspect-ratio: 21 / 9;
+}
+
+.team-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+}
+
+.intro-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    display: block;
+}
+
+.featured-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.modal-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    display: block;
+}
+
+/* ── Hover zoom ── */
+.product-card:hover .product-image-container img,
+.product-card:hover .product-image img,
+.gallery-item:hover img,
+.blog-card:hover .blog-image img,
+.project-card:hover .project-image img,
+.infrastructure-item:hover img,
+.team-card:hover .team-image img,
+.intro-image:hover img {
+    transform: scale(1.06);
+}
+
+/* ── Hero carousel stays cover (full-bleed background) ── */
+.hero-carousel {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-slide.active { opacity: 1; }
+
+.carousel-slide img,
+.hero-carousel .carousel-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;    /* hero stays full-bleed */
+    object-position: center !important;
+    background: transparent;
+    padding: 0 !important;
+}
+
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 5, 11, 0.6);
+    z-index: 1;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 40px; height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary);
+    width: 60px;
+}
+
+/* ── Loading states ── */
+img.loading { opacity: 0; }
+img.loaded  { opacity: 1; transition: opacity 0.3s ease; }
+
+/* ── Loading screen logo ── */
+@keyframes fadeInScale {
+    0%   { opacity: 0; transform: scale(0.8); }
+    50%  { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.loading-screen .logo-image {
+    animation: fadeInScale 1s ease forwards;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .infrastructure-item.large { aspect-ratio: 16 / 9; }
+}
+        .logo-img {
+            height: 40px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+            transition: all var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img {
+            height: 35px;
+        }
+
+        .footer-logo {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-img {
+            height: 45px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        .loading-screen .loader-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .loading-screen .logo-image {
+            max-width: 250px;
+            width: 80%;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
+            animation: fadeInScale 1.5s ease forwards;
+        }
+
+        .mobile-menu .nav-logo {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            height: auto;
+        }
+
+        .mobile-menu .logo-img {
+            height: 35px;
+            max-width: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 35px;
+                max-width: 120px;
+            }
+            
+            .footer-logo-img {
+                height: 40px;
+                max-width: 150px;
+            }
+            
+            .loading-screen .logo-image {
+                max-width: 200px;
+                max-height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 30px;
+                max-width: 100px;
+            }
+            
+            .footer-logo-img {
+                height: 35px;
+                max-width: 130px;
+            }
+            
+            .loading-screen .logo-image {
+                max-width: 180px;
+                max-height: 80px;
+            }
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .btn-quote {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+
+        .product-slide-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-slide-card .btn-quote {
+            display: block;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Hero Carousel Styles */
+        .hero-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 5, 11, 0.6);
+            z-index: 1;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--primary);
+            width: 60px;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+        }
+
+        /* Universal Image Fix */
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-image-container,
+        .gallery-item,
+        .blog-image,
+        .project-image,
+        .infrastructure-item,
+        .team-image {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image-container img,
+        .gallery-item img,
+        .blog-image img,
+        .project-image img,
+        .infrastructure-item img,
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-glow">Get Quote</a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Carousel -->
+        <section class="hero-section">
+            <!-- Carousel -->
+            <div class="hero-carousel">
+                <div class="carousel-slide active">
+                    <img src="assets/images/b1.png" alt="LED Display Installation">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/b2.png" alt="Acrylic Products">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/b3.png" alt="Whiteboard Solutions">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/b4.png" alt="Manufacturing Facility">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="text-gradient">Innovative</span> Display Solutions
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typed-text" id="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    LED screens · Acrylic masterpieces · Premium whiteboards<br>
+                    Your corporate search ends here.
+                </p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn-primary">
+                        Explore Products <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="btn-outline">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll</p>
+            </div>
+        </section>
+
+        <!-- Company Introduction Section -->
+        <section class="company-intro section-padding">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-image" data-aos="fade-right">
+                        <img src="assets/images/since.png" alt="Mr. Fixon Facility">
+                        <div class="experience-badge">
+                            <div class="years">30+</div>
+                            <div class="text">Years of Excellence</div>
+                        </div>
+                    </div>
+                    <div class="intro-content" data-aos="fade-left">
+                        <span class="section-subtitle">Since 1996</span>
+                        <h2 class="section-title">India's Most Trusted <span>Display Solutions</span> Provider</h2>
+                        <p class="intro-text">
+                            For over three decades, Mr. Fixon has been at the forefront of display technology and signage solutions. Under the visionary leadership of Mr. Bechar Patel, we've delivered unmatched quality and innovation to over 5000+ clients across India.
+                        </p>
+                        <div class="intro-features">
+                            <div class="intro-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ISO Certified</span>
+                            </div>
+                            <div class="intro-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>30+ Years Experience</span>
+                            </div>
+                            <div class="intro-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>5000+ Projects</span>
+                            </div>
+                            <div class="intro-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pan-India Delivery</span>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn-outline mt-4">
+                            Learn More About Us <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Verticals Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">What We Offer</span>
+                    <h2 class="section-title">Premium <span>Product Categories</span></h2>
+                </div>
+
+                <div class="verticals-grid">
+                    <!-- LED Category -->
+                    <div class="vertical-card" data-aos="fade-up" data-tilt>
+                        <div class="vertical-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>LED Displays</h3>
+                        <p>Indoor & Outdoor · Fixed & Mobile · Circle & Taxi LED · High brightness · Energy efficient</p>
+                        <a href="products.html?category=led" class="vertical-link">
+                            Explore LED <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Acrylic Category -->
+                    <div class="vertical-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <div class="vertical-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Acrylic Products</h3>
+                        <p>Menu Stands · Display Cases · Trophies · Donation Boxes · Cosmetic Stands · Custom Fabrication</p>
+                        <a href="products.html?category=acrylic" class="vertical-link">
+                            Explore Acrylic <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Whiteboard Category -->
+                    <div class="vertical-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
+                        <div class="vertical-icon">
+                            <i class="fas fa-chalkboard"></i>
+                        </div>
+                        <h3>Whiteboards</h3>
+                        <p>Glass Magnetic · Nano Clean™ · Mobile Easels · Felt Boards · Accessories · 25-Year Guarantee</p>
+                        <a href="products.html?category=whiteboard" class="vertical-link">
+                            Explore Whiteboards <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Why Mr. Fixon</span>
+                    <h2 class="section-title">Three Decades of <span>Excellence</span></h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="zoom-in" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Premium Quality</h4>
+                        <p>ISO certified manufacturing with stringent 7-stage quality control process ensuring zero defects</p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="100" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-fast"></i>
+                        </div>
+                        <h4>Pan-India Delivery</h4>
+                        <p>Safe packaging with bubble wrap and wooden crates, delivered to your doorstep anywhere in India</p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>1 Year Warranty</h4>
+                        <p>Comprehensive warranty with free spare parts and on-site service within 48 hours</p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="zoom-in" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>Cutting-edge Tech</h4>
+                        <p>Latest SMD LEDs, Nano Clean™ surfaces, and smart control systems for superior performance</p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="100" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Custom Design</h4>
+                        <p>In-house design team creates bespoke solutions tailored to your specific requirements</p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200" data-tilt>
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4>After-Sales Support</h4>
+                        <p>Dedicated support team available 24/7 for maintenance and troubleshooting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Counter Section -->
+        <section class="stats-section section-padding">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="fade-up">
+                        <div class="counter-number"><span class="counter" data-target="32">0</span>+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="counter-number"><span class="counter" data-target="5000">0</span>+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="counter-number"><span class="counter" data-target="250">0</span>+</div>
+                        <div class="stat-label">Product Variants</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="counter-number"><span class="counter" data-target="24">0</span>/7</div>
+                        <div class="stat-label">Customer Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure Preview Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Facility</span>
+                    <h2 class="section-title">State-of-the-Art <span>Infrastructure</span></h2>
+                </div>
+
+                <div class="infrastructure-grid">
+                    <div class="infrastructure-item" data-aos="zoom-in">
+                        <img src="assets/images/led_manufacturing.png" alt="Manufacturing Unit" loading="lazy">
+                        <div class="infrastructure-overlay">
+                            <h4>Manufacturing Unit</h4>
+                            <p>25,000 sq. ft. facility with advanced machinery</p>
+                        </div>
+                    </div>
+                    <div class="infrastructure-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="assets/images/quality_control.png" alt="Quality Control Lab" loading="lazy">
+                        <div class="infrastructure-overlay">
+                            <h4>Quality Control Lab</h4>
+                            <p>7-stage testing for zero defects</p>
+                        </div>
+                    </div>
+                    <div class="infrastructure-item large" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="assets/images/warehouse.png" alt="Warehouse" loading="lazy">
+                        <div class="infrastructure-overlay">
+                            <h4>Warehouse & Logistics</h4>
+                            <p>Safe packaging and pan-India delivery</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <a href="infrastructure.html" class="btn-outline">
+                        Explore Our Facility <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase Slider -->
+        <section class="product-showcase section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Best Sellers</span>
+                    <h2 class="section-title">Featured <span>Products</span></h2>
+                </div>
+
+                <div class="swiper productSwiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-slide-card">
+                                <div class="product-image-container" style="aspect-ratio: 1/1;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKdfJrPUJ7Qxjzct0EDXYyjVaJpKfG7UL2Q&s" alt="P10 Outdoor LED Display">
+                                </div>
+                                <div class="product-slide-content">
+                                    <h4>P10 Outdoor LED</h4>
+                                    <p>6500 nits · IP65</p>
+                                    <a href="https://wa.me/918384858678/" class="btn-quote">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-slide-card">
+                                <div class="product-image-container" style="aspect-ratio: 1/1;">
+                                    <img src="assets/images/magnetic_glass_whiteboard.png" alt="Glass Whiteboard">
+                                </div>
+                                <div class="product-slide-content">
+                                    <h4>Glass Whiteboard</h4>
+                                    <p>Magnetic · 25-Year Guarantee</p>
+                                    <a href="https://wa.me/918384858678/" class="btn-quote">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-slide-card">
+                                <div class="product-image-container" style="aspect-ratio: 1/1;">
+                                    <img src="assets/images/premium_magnetic_whiteboard.png" alt="Acrylic Menu Stand">
+                                </div>
+                                <div class="product-slide-content">
+                                    <h4>Acrylic Menu Stand</h4>
+                                    <p>A4 · Adjustable</p>
+                                    <a href="https://wa.me/918384858678/" class="btn-quote">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-slide-card">
+                                <div class="product-image-container" style="aspect-ratio: 1/1;">
+                                    <img src="assets/images/circle_led_display.png" alt="Circle LED Display">
+                                </div>
+                                <div class="product-slide-content">
+                                    <h4>Circle LED</h4>
+                                    <p>Custom sizes · 360° view</p>
+                                    <a href="https://wa.me/918384858678/" class="btn-quote">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">How We Work</span>
+                    <h2 class="section-title">Our <span>Process</span></h2>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step" data-aos="fade-right">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Consultation</h4>
+                            <p>Understanding your requirements and space</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Design</h4>
+                            <p>Creating custom solutions with 3D renders</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-aos="fade-right" data-aos-delay="200">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Manufacturing</h4>
+                            <p>Precision fabrication with quality control</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Delivery</h4>
+                            <p>Safe packaging and on-time installation</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-aos="fade-right" data-aos-delay="400">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h4>Support</h4>
+                            <p>24/7 after-sales service and maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Client Feedback</span>
+                    <h2 class="section-title">What Our <span>Clients Say</span></h2>
+                </div>
+
+                <div class="swiper testimonialSwiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The P2.5 LED display we installed in our lobby has transformed the space. Exceptional quality and professional installation by the Mr. Fixon team."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">RK</div>
+                                    <div class="author-info">
+                                        <h4>Rajesh Khanna</h4>
+                                        <p>CEO, VivaTech Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The glass whiteboards are absolutely brilliant. Nano Clean surface works like magic. Our entire office now uses Mr. Fixon boards. Highly recommended!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">NS</div>
+                                    <div class="author-info">
+                                        <h4>Neha Sharma</h4>
+                                        <p>Creative Director, Studio 108</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"Custom acrylic trophies from Mr. Fixon elevated our annual awards ceremony. Perfect finish, delivered on time, and within budget. Will order again."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">AD</div>
+                                    <div class="author-info">
+                                        <h4>Anjali Desai</h4>
+                                        <p>Event Manager, Elite Events</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The outdoor LED screen has been running 24/7 for 2 years with zero issues. Best investment for our advertising. The team's support has been exceptional."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">MP</div>
+                                    <div class="author-info">
+                                        <h4>Mukesh Patel</h4>
+                                        <p>Owner, City Mall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="certifications-grid">
+                    <div class="certification-item" data-aos="zoom-in">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <p>ISO 9001:2015</p>
+                    </div>
+                    <div class="certification-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="certification-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <p>CE Certified</p>
+                    </div>
+                    <div class="certification-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="certification-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <p>RoHS Compliant</p>
+                    </div>
+                    <div class="certification-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="certification-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <p>MSME Registered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">Ready to Transform Your Space?</h2>
+                    <p class="cta-text">Get a free consultation and quote from our experts within 24 hours</p>
+                    <a href="contact.html" class="btn-primary btn-large">
+                        Get Started Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                    </a>
+                    <p class="footer-description">
+                        India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html?category=led">LED Displays</a></li>
+                        <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                        <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                        <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                        <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                        <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-cyan-400"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.1.5/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+            offset: 50
+        });
+        
+        // Initialize Typed.js
+        new Typed('#typed-text', {
+            strings: [
+                'LED Displays for Every Need',
+                'Custom Acrylic Products',
+                'Premium Glass Whiteboards',
+                'Digital Signage Solutions',
+                'Your Corporate Search Ends Here'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Hero Carousel
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 seconds
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto advance slides
+        setInterval(nextSlide, slideInterval);
+
+        // Manual control via indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Pause carousel on hover (optional)
+        const carousel = document.querySelector('.hero-carousel');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        carousel.addEventListener('mouseleave', () => {
+            setInterval(nextSlide, slideInterval);
+        });
+    </script>
+</body>
+</html>

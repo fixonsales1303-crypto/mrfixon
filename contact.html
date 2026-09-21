@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Mr. Fixon - Get a Quote | LED Displays, Acrylic & Whiteboard Solutions</title>
+    <meta name="title" content="Contact Mr. Fixon - Get a Quote | LED Displays, Acrylic & Whiteboard Solutions">
+    <meta name="description" content="Get in touch with Mr. Fixon for premium LED displays, custom acrylic products, and whiteboards. Request a quote, schedule a consultation, or visit our Mumbai facility.">
+    <meta name="keywords" content="contact Mr. Fixon, LED display quote, acrylic products inquiry, whiteboard consultation, signage solutions Mumbai">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/contact.html">
+    <meta property="og:title" content="Contact Mr. Fixon - Get a Quote | LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="og:description" content="Get in touch with Mr. Fixon for premium LED displays, custom acrylic products, and whiteboards.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/contact-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/contact.html">
+    <meta property="twitter:title" content="Contact Mr. Fixon - Get a Quote | LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="twitter:description" content="Get in touch with Mr. Fixon for premium LED displays, custom acrylic products, and whiteboards.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/contact-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/contact.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Mr. Fixon Contact Page",
+        "description": "Contact Mr. Fixon for LED displays, acrylic products, and whiteboard solutions",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Mr. Fixon",
+            "telephone": "+91-8384858678",
+            "email": "info@mrfixon.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mumbai",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8384858678",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Hindi"]
+            }
+        }
+    }
+    </script>
+
+        <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Add these logo sizing rules to your style.css file */
+
+/* Navbar Logo - Fixed Size */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 50px; /* Fixed height container */
+}
+
+.logo-img {
+    height: 40px; /* Fixed height */
+    width: auto;
+    max-width: 150px; /* Maximum width constraint */
+    object-fit: contain;
+    transition: all var(--transition-fast);
+}
+
+.navbar.scrolled .logo-img {
+    height: 35px; /* Slightly smaller when scrolled */
+}
+
+/* Footer Logo - Fixed Size */
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+    height: 45px; /* Slightly larger in footer */
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* Loading Screen Logo - Properly Sized */
+.loading-screen .loader-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading-screen .logo-image {
+    max-width: 250px; /* Maximum width */
+    width: 80%; /* Responsive width */
+    height: auto;
+    max-height: 120px; /* Maximum height constraint */
+    object-fit: contain;
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+/* Mobile Menu Logo (if needed) */
+.mobile-menu .nav-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: auto;
+}
+
+.mobile-menu .logo-img {
+    height: 35px;
+    max-width: 120px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .footer-logo-img {
+        height: 40px;
+        max-width: 150px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 100px;
+    }
+    
+    .footer-logo-img {
+        height: 35px;
+        max-width: 130px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 180px;
+        max-height: 80px;
+    }
+}
+
+/* Animation for loading logo */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        </style>
+
+        
+</head>
+<body>
+
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <!-- Replace with your actual logo path -->
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+        </a>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Get In <span>Touch</span></h1>
+                <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Intro -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <p class="text-xl text-gray-300 mb-8">
+                        Have a project in mind? Need a quote? Our team is ready to assist you. Reach out through any of the channels below or visit our facility in Mumbai.
+                    </p>
+                </div>
+
+                <!-- Quick Contact Badges -->
+                <div class="quick-contact-grid" data-aos="fade-up" data-aos-delay="100">
+                    <a href="tel:+918384858678" class="quick-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span class="label">Call Us Now</span>
+                            <span class="value">+91 83848 58678</span>
+                        </div>
+                    </a>
+                    <a href="mailto:info@mrfixon.com" class="quick-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="label">Email Us</span>
+                            <span class="value">info@mrfixon.com</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/918384858678" class="quick-contact-item" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span class="label">WhatsApp</span>
+                            <span class="value">24/7 Support</span>
+                        </div>
+                    </a>
+                    <div class="quick-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="label">Business Hours</span>
+                            <span class="value">Mon-Sat, 9AM-8PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info-side" data-aos="fade-right">
+                        <div class="contact-info-card">
+                            <h2>Let's <span>Connect</span></h2>
+                            <p class="info-subtitle">We're here to help with your display and signage needs</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Visit Our Facility</h4>
+                                        <p>Mr. Fixon Manufacturing Unit<br>
+                                        Plot No. 123, MIDC Industrial Area<br>
+                                        Andheri East, Mumbai - 400093<br>
+                                        Maharashtra, India</p>
+                                        <a href="#map" class="direction-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Phone Numbers</h4>
+                                        <p><strong>Sales & Support:</strong> +91 83848 58678</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Email Addresses</h4>
+                                        <p><strong>General Inquiries:</strong> info@mrfixon.com</p>
+                                        <p><strong>Sales:</strong> sales@mrfixon.com</p>
+                                        <p><strong>Support:</strong> support@mrfixon.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>Business Hours</h4>
+                                        <p><strong>Monday - Saturday:</strong> 9:00 AM - 8:00 PM</p>
+                                        <p><strong>Sunday:</strong> Closed</p>
+                                        <p><strong>24/7 Online Support:</strong> WhatsApp & Email</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-social">
+                                <h4>Follow Us</h4>
+                                <div class="social-links-large">
+                                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Business Hours Status -->
+                            <div class="business-status">
+                                <div class="status-indicator"></div>
+                                <div class="status-text">
+                                    <span id="businessStatus">Checking availability...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-side" data-aos="fade-left">
+                        <div class="contact-form-card">
+                            <div class="form-header">
+                                <h3>Send us a Message</h3>
+                                <p>We'll get back to you within 24 hours</p>
+                            </div>
+                            
+                            <form id="contactForm" class="contact-form">
+                                <!-- Honeypot field (hidden from users) -->
+                                <div class="honeypot">
+                                    <input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="floating-label">
+                                        <input type="text" name="name" id="name" placeholder=" " required>
+                                        <label for="name">Full Name *</label>
+                                    </div>
+                                    
+                                    <div class="floating-label">
+                                        <input type="email" name="email" id="email" placeholder=" " required>
+                                        <label for="email">Email Address *</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="floating-label">
+                                        <input type="tel" name="phone" id="phone" placeholder=" ">
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                    
+                                    <div class="floating-label">
+                                        <select name="subject" id="subject" required>
+                                            <option value="" disabled selected></option>
+                                            <option value="LED Displays">LED Displays</option>
+                                            <option value="Acrylic Products">Acrylic Products</option>
+                                            <option value="Whiteboards">Whiteboards</option>
+                                            <option value="Custom Project">Custom Project</option>
+                                            <option value="Quote Request">Quote Request</option>
+                                            <option value="Support">Support</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <label for="subject">Select Subject *</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="floating-label">
+                                    <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+                                    <label for="message">Your Message *</label>
+                                </div>
+
+                                <!-- File Upload -->
+                                <div class="file-upload">
+                                    <label for="fileUpload" class="file-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Attach File (Optional)</span>
+                                        <span class="file-info">Max 10MB, .pdf, .jpg, .png, .dwg</span>
+                                    </label>
+                                    <input type="file" name="fileUpload" id="fileUpload" accept=".pdf,.jpg,.png,.dwg,.dxf,.ai,.eps">
+                                </div>
+
+                                <!-- Budget Range -->
+                                <div class="budget-range">
+                                    <label>Budget Range (Optional)</label>
+                                    <div class="range-options">
+                                        <label class="range-option">
+                                            <input type="radio" name="budget" value="< 50k">
+                                            <span>< ₹50K</span>
+                                        </label>
+                                        <label class="range-option">
+                                            <input type="radio" name="budget" value="50k-2L">
+                                            <span>₹50K - ₹2L</span>
+                                        </label>
+                                        <label class="range-option">
+                                            <input type="radio" name="budget" value="2L-5L">
+                                            <span>₹2L - ₹5L</span>
+                                        </label>
+                                        <label class="range-option">
+                                            <input type="radio" name="budget" value="> 5L">
+                                            <span>> ₹5L</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Preferred Contact Method -->
+                                <div class="contact-method">
+                                    <label>Preferred Contact Method</label>
+                                    <div class="method-options">
+                                        <label class="method-option">
+                                            <input type="checkbox" name="contact_method[]" value="email" checked>
+                                            <i class="fas fa-envelope"></i>
+                                            <span>Email</span>
+                                        </label>
+                                        <label class="method-option">
+                                            <input type="checkbox" name="contact_method[]" value="phone">
+                                            <i class="fas fa-phone"></i>
+                                            <span>Phone</span>
+                                        </label>
+                                        <label class="method-option">
+                                            <input type="checkbox" name="contact_method[]" value="whatsapp">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <span>WhatsApp</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- CAPTCHA-like simple validation -->
+                                <div class="simple-captcha">
+                                    <label>What is 3 + 4? (Anti-spam)</label>
+                                    <div class="captcha-input">
+                                        <input type="number" name="captcha" id="captcha" min="0" max="20" required>
+                                        <span class="captcha-hint">Enter the answer</span>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn-primary btn-large w-full" id="submitBtn">
+                                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
+                                
+                                <div id="formMessage" class="form-message"></div>
+
+                                <p class="form-footer">
+                                    By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map" class="map-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Our Location</span>
+                    <h2 class="section-title">Find Us <span>On Map</span></h2>
+                </div>
+
+                <div class="map-wrapper" data-aos="zoom-in">
+                    <div class="map-container" id="mapContainer">
+                        <!-- Map will be initialized here -->
+                    </div>
+                    <div class="map-overlay-card">
+                        <h4>Mr. Fixon Headquarters</h4>
+                        <p><i class="fas fa-map-pin"></i> MIDC Industrial Area, Andheri East, Mumbai</p>
+                        <p><i class="fas fa-phone"></i> +91 83848 58678</p>
+                        <p><i class="fas fa-clock"></i> Open Mon-Sat, 9AM-8PM</p>
+                        <a href="https://maps.google.com/?q=Mr.+Fixon+Mumbai" target="_blank" class="btn-outline btn-small">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Quick Answers</span>
+                    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                </div>
+
+                <div class="faq-grid" data-aos="fade-up">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How quickly can I get a quote?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We typically respond to quote requests within 4-6 business hours. For urgent requirements, please call us directly at +91 83848 58678.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you offer samples before bulk orders?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide samples for most products. Charges apply for samples which are refundable on bulk orders. Contact our sales team for details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are your payment terms?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept 50% advance payment via bank transfer, UPI, or cheque. The remaining 50% is due before dispatch. For corporate clients, special terms may be arranged.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you provide installation services?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer professional installation services across India. Our team can handle everything from site survey to final commissioning.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What is your warranty policy?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>LED displays come with 1-year comprehensive warranty. Whiteboards have 25-year guarantee on glass. Acrylic products have 6-month warranty against defects.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I visit your facility?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We welcome visitors to our Mumbai facility. Please schedule an appointment in advance so we can arrange a proper tour.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-contact section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Direct Contacts</span>
+                    <h2 class="section-title">Speak to Our <span>Team</span></h2>
+                </div>
+
+                <div class="team-contact-grid">
+                    <div class="team-contact-card" data-aos="fade-up" data-tilt>
+                        <img src="assets/images/suresh_iyer.png" alt="Sales Team">
+                        <h4>Sales Department</h4>
+                        <p>For quotes and product inquiries</p>
+                        <a href="mailto:sales@mrfixon.com">sales@mrfixon.com</a>
+                        <a href="tel:+918384858678">+91 83848 58678</a>
+                    </div>
+
+                    <div class="team-contact-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <img src="assets/images/anjali_menon.png" alt="Support Team">
+                        <h4>Technical Support</h4>
+                        <p>For installation and after-sales support</p>
+                        <a href="mailto:support@mrfixon.com">support@mrfixon.com</a>
+                        <a href="tel:+918384858678">+91 83848 58678</a>
+                    </div>
+
+                    <div class="team-contact-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
+                        <img src="assets/images/rohan_gupta.png" alt="Projects Team">
+                        <h4>Projects Department</h4>
+                        <p>For custom projects and collaborations</p>
+                        <a href="mailto:projects@mrfixon.com">projects@mrfixon.com</a>
+                        <a href="tel:+918384858678">+91 83848 58678</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">Ready to Start Your Project?</h2>
+                    <p class="cta-text">Get a free consultation and quote within 24 hours</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary btn-large" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">
+                            Fill Contact Form <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="https://wa.me/918384858678" class="btn-outline btn-large" target="_blank">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo">
+                    <!-- Replace with your actual logo path -->
+                    <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                </a>
+                <p class="footer-description">
+                    India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html?category=led">LED Displays</a></li>
+                    <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                    <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                    <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                    <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-cyan-400"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.1.5/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/contact.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+            offset: 50
+        });
+
+        // Initialize Map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Map initialization
+            if (document.getElementById('mapContainer')) {
+                const map = L.map('mapContainer').setView([19.1136, 72.8697], 15);
+                
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                
+                // Custom icon
+                const customIcon = L.divIcon({
+                    className: 'custom-map-marker',
+                    html: '<i class="fas fa-map-marker-alt"></i>',
+                    iconSize: [40, 40],
+                    iconAnchor: [20, 40]
+                });
+                
+                const marker = L.marker([19.1136, 72.8697], { icon: customIcon }).addTo(map);
+                marker.bindPopup('<b>Mr. Fixon Headquarters</b><br>MIDC Industrial Area, Andheri East, Mumbai').openPopup();
+            }
+
+            // Business hours status
+            function updateBusinessStatus() {
+                const now = new Date();
+                const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                const hour = now.getHours();
+                const minutes = now.getMinutes();
+                
+                const statusElement = document.getElementById('businessStatus');
+                const statusDot = document.querySelector('.status-indicator');
+                
+                // Business hours: Monday-Saturday (1-6), 9 AM to 8 PM
+                if (day >= 1 && day <= 6 && hour >= 9 && hour < 20) {
+                    statusElement.textContent = 'Open Now - We\'re available!';
+                    statusDot.style.background = '#10b981';
+                    statusDot.style.boxShadow = '0 0 10px #10b981';
+                } else {
+                    statusElement.textContent = 'Closed - We\'ll respond within 24 hours';
+                    statusDot.style.background = '#ef4444';
+                    statusDot.style.boxShadow = '0 0 10px #ef4444';
+                }
+            }
+            
+            updateBusinessStatus();
+            setInterval(updateBusinessStatus, 60000); // Update every minute
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // File upload preview
+            const fileInput = document.getElementById('fileUpload');
+            const fileLabel = document.querySelector('.file-label');
+            
+            if (fileInput && fileLabel) {
+                fileInput.addEventListener('change', function(e) {
+                    if (this.files.length > 0) {
+                        const fileName = this.files[0].name;
+                        fileLabel.innerHTML = `<i class="fas fa-check-circle"></i><span>${fileName}</span>`;
+                    } else {
+                        fileLabel.innerHTML = `
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Attach File (Optional)</span>
+                            <span class="file-info">Max 10MB, .pdf, .jpg, .png, .dwg</span>
+                        `;
+                    }
+                });
+            }
+
+            // Simple CAPTCHA validation
+            const captchaInput = document.getElementById('captcha');
+            if (captchaInput) {
+                captchaInput.addEventListener('input', function() {
+                    if (this.value == 7) {
+                        this.style.borderColor = '#10b981';
+                    } else {
+                        this.style.borderColor = '#ef4444';
+                    }
+                });
+            }
+
+            // Pre-fill form from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productParam = urlParams.get('product');
+            const subjectParam = urlParams.get('subject');
+            
+            if (subjectParam) {
+                const subjectSelect = document.getElementById('subject');
+                if (subjectSelect) {
+                    const option = Array.from(subjectSelect.options).find(opt => opt.value === subjectParam);
+                    if (option) {
+                        subjectSelect.value = subjectParam;
+                    }
+                }
+            }
+            
+            if (productParam) {
+                const messageField = document.getElementById('message');
+                if (messageField) {
+                    messageField.value = `I'm interested in product: ${productParam}\n\n`;
+                }
+            }
+        });
+    </script>
+
+    <style>
+        .quick-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .quick-contact-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .quick-contact-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(0, 180, 216, 0.1);
+        }
+
+        .quick-contact-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .quick-contact-item .label {
+            display: block;
+            color: var(--gray-400);
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .quick-contact-item .value {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .contact-info-side {
+            flex: 1;
+        }
+
+        .contact-info-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2.5rem;
+            height: 100%;
+        }
+
+        .contact-info-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card h2 span {
+            color: var(--primary);
+        }
+
+        .info-subtitle {
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+        }
+
+        .contact-form-side {
+            flex: 1.5;
+        }
+
+        .contact-form-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2.5rem;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .form-header p {
+            color: var(--gray-400);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .floating-label {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .floating-label input,
+        .floating-label textarea,
+        .floating-label select {
+            width: 100%;
+            padding: 1rem 0.8rem 0.5rem 0.8rem;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--glass-border);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-label textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .floating-label select {
+            cursor: pointer;
+            appearance: none;
+            background: transparent;
+        }
+
+        .floating-label select option {
+            background: var(--dark-light);
+            color: white;
+        }
+
+        .floating-label label {
+            position: absolute;
+            left: 0.8rem;
+            top: 0.8rem;
+            color: var(--gray-500);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-label input:focus ~ label,
+        .floating-label input:not(:placeholder-shown) ~ label,
+        .floating-label textarea:focus ~ label,
+        .floating-label textarea:not(:placeholder-shown) ~ label,
+        .floating-label select:focus ~ label,
+        .floating-label select:has(option:checked:not([value=""])) ~ label {
+            top: -0.5rem;
+            left: 0;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+
+        .floating-label input:focus,
+        .floating-label textarea:focus,
+        .floating-label select:focus {
+            border-bottom-color: var(--primary);
+        }
+
+        .file-upload {
+            margin: 1.5rem 0;
+        }
+
+        .file-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border: 2px dashed var(--glass-border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-label:hover {
+            border-color: var(--primary);
+            background: rgba(0, 180, 216, 0.05);
+        }
+
+        .file-label i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .file-label span {
+            color: white;
+            font-weight: 500;
+        }
+
+        .file-info {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 0.3rem;
+        }
+
+        #fileUpload {
+            display: none;
+        }
+
+        .budget-range,
+        .contact-method {
+            margin: 1.5rem 0;
+        }
+
+        .budget-range label,
+        .contact-method label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .range-options,
+        .method-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .range-option,
+        .method-option {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .range-option:hover,
+        .method-option:hover {
+            border-color: var(--primary);
+        }
+
+        .range-option input,
+        .method-option input {
+            display: none;
+        }
+
+        .range-option span,
+        .method-option span {
+            color: var(--gray-300);
+        }
+
+        .range-option input:checked + span,
+        .method-option input:checked + span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .method-option i {
+            color: var(--primary);
+        }
+
+        .simple-captcha {
+            margin: 1.5rem 0;
+        }
+
+        .simple-captcha label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .captcha-input {
+            position: relative;
+        }
+
+        .captcha-input input {
+            width: 100px;
+            padding: 0.8rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .captcha-hint {
+            position: absolute;
+            left: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .business-status {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border-radius: 50px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        .status-text {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .map-wrapper {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            height: 450px;
+        }
+
+        #mapContainer {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .map-overlay-card {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            max-width: 300px;
+            z-index: 2;
+        }
+
+        .map-overlay-card h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .map-overlay-card p {
+            color: var(--gray-300);
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .map-overlay-card i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .custom-map-marker i {
+            color: var(--primary);
+            font-size: 2.5rem;
+            filter: drop-shadow(0 4px 10px rgba(0, 180, 216, 0.5));
+        }
+
+        .team-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .team-contact-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-contact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .team-contact-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
+        .team-contact-card h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-contact-card p {
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .team-contact-card a {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 0.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .team-contact-card a:hover {
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 1200px) {
+            .quick-contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .captcha-hint {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quick-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-overlay-card {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+
+            .map-wrapper {
+                height: auto;
+            }
+
+            #mapContainer {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-card,
+            .contact-form-card {
+                padding: 1.5rem;
+            }
+
+            .range-options,
+            .method-options {
+                flex-direction: column;
+            }
+
+            .range-option,
+            .method-option {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html>

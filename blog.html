@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Blog - Mr. Fixon | LED Display Insights, Acrylic Guide & Industry News</title>
+    <meta name="title" content="Blog - Mr. Fixon | LED Display Insights, Acrylic Guide & Industry News">
+    <meta name="description" content="Stay updated with the latest trends in LED displays, acrylic fabrication, and whiteboard technology. Expert insights, buying guides, and industry news from Mr. Fixon.">
+    <meta name="keywords" content="LED display blog, acrylic guide, whiteboard tips, signage industry news, digital signage trends">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/blog.html">
+    <meta property="og:title" content="Blog - Mr. Fixon | LED Display Insights, Acrylic Guide & Industry News">
+    <meta property="og:description" content="Stay updated with the latest trends in LED displays, acrylic fabrication, and whiteboard technology.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/blog-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/blog.html">
+    <meta property="twitter:title" content="Blog - Mr. Fixon | LED Display Insights, Acrylic Guide & Industry News">
+    <meta property="twitter:description" content="Stay updated with the latest trends in LED displays, acrylic fabrication, and whiteboard technology.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/blog-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/blog.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Mr. Fixon Blog",
+        "description": "Expert insights on LED displays, acrylic products, and whiteboard technology",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Mr. Fixon"
+        }
+    }
+    </script>
+
+        <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Add these logo sizing rules to your style.css file */
+
+/* Navbar Logo - Fixed Size */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 50px; /* Fixed height container */
+}
+
+.logo-img {
+    height: 40px; /* Fixed height */
+    width: auto;
+    max-width: 150px; /* Maximum width constraint */
+    object-fit: contain;
+    transition: all var(--transition-fast);
+}
+
+.navbar.scrolled .logo-img {
+    height: 35px; /* Slightly smaller when scrolled */
+}
+
+/* Footer Logo - Fixed Size */
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+    height: 45px; /* Slightly larger in footer */
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* Loading Screen Logo - Properly Sized */
+.loading-screen .loader-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading-screen .logo-image {
+    max-width: 250px; /* Maximum width */
+    width: 80%; /* Responsive width */
+    height: auto;
+    max-height: 120px; /* Maximum height constraint */
+    object-fit: contain;
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+/* Mobile Menu Logo (if needed) */
+.mobile-menu .nav-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: auto;
+}
+
+.mobile-menu .logo-img {
+    height: 35px;
+    max-width: 120px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .footer-logo-img {
+        height: 40px;
+        max-width: 150px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 100px;
+    }
+    
+    .footer-logo-img {
+        height: 35px;
+        max-width: 130px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 180px;
+        max-height: 80px;
+    }
+}
+
+/* Animation for loading logo */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        </style>
+
+        
+</head>
+<body>
+
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <!-- Replace with your actual logo path -->
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+        </a>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link active">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Our <span>Blog</span></h1>
+                <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Blog</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Intro -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <p class="text-xl text-gray-300 mb-8">
+                        Insights, guides, and news from the world of LED displays, acrylic fabrication, and whiteboard technology. Written by industry experts with 30+ years of experience.
+                    </p>
+                </div>
+
+                <!-- Subscribe Bar -->
+                <div class="subscribe-bar" data-aos="fade-up">
+                    <div class="subscribe-content">
+                        <h3>Stay Updated</h3>
+                        <p>Get the latest articles and industry news delivered to your inbox</p>
+                        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Featured</span>
+                    <h2 class="section-title">Editor's <span>Pick</span></h2>
+                </div>
+
+                <div class="featured-post" data-aos="fade-up">
+                    <div class="featured-post-grid">
+                        <div class="featured-post-image">
+                            <img src="assets/images/led_showcase.png" alt="LED Display Technology">
+                            <div class="post-category">Technology</div>
+                        </div>
+                        <div class="featured-post-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                                <span><i class="far fa-user"></i> By Rajesh Mehta</span>
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h3>The Future of LED Displays: What to Expect in 2025 and Beyond</h3>
+                            <p class="post-excerpt">
+                                From micro-LED technology to AI-powered content management, explore the cutting-edge innovations shaping the LED display industry. Learn how these advancements can benefit your business.
+                            </p>
+                            <div class="post-tags">
+                                <span class="tag">LED Technology</span>
+                                <span class="tag">Future Trends</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <a href="blog-post.html?id=1" class="btn-outline mt-4">Read Full Article <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Post 1 -->
+                    <div class="blog-card" data-aos="fade-up" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Acrylic Guide">
+                            <div class="post-category">Guide</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> March 10, 2025</span>
+                                <span><i class="far fa-user"></i> By Priya Sharma</span>
+                            </div>
+                            <h3>The Complete Guide to Acrylic Fabrication: Techniques, Applications, and Best Practices</h3>
+                            <p class="post-excerpt">Everything you need to know about working with acrylic - from laser cutting to polishing, and how to choose the right thickness for your project.</p>
+                            <div class="post-tags">
+                                <span class="tag">Acrylic</span>
+                                <span class="tag">Fabrication</span>
+                                <span class="tag">DIY</span>
+                            </div>
+                            <a href="blog-post.html?id=2" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="50" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/led_showcase.png" alt="Whiteboard Comparison">
+                            <div class="post-category">Comparison</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> March 5, 2025</span>
+                                <span><i class="far fa-user"></i> By Vikram Singh</span>
+                            </div>
+                            <h3>Glass vs. Magnetic vs. Felt Whiteboards: Which One is Right for Your Office?</h3>
+                            <p class="post-excerpt">A comprehensive comparison of different whiteboard types, their pros and cons, and recommendations for different use cases.</p>
+                            <div class="post-tags">
+                                <span class="tag">Whiteboards</span>
+                                <span class="tag">Office</span>
+                                <span class="tag">Comparison</span>
+                            </div>
+                            <a href="blog-post.html?id=3" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="LED Installation">
+                            <div class="post-category">Case Study</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> February 28, 2025</span>
+                                <span><i class="far fa-user"></i> By Anjali Desai</span>
+                            </div>
+                            <h3>How Phoenix Mall Increased Footfall by 40% with a Single LED Installation</h3>
+                            <p class="post-excerpt">A detailed case study of our flagship project, including planning, execution challenges, and the impressive results achieved.</p>
+                            <div class="post-tags">
+                                <span class="tag">Case Study</span>
+                                <span class="tag">LED</span>
+                                <span class="tag">ROI</span>
+                            </div>
+                            <a href="blog-post.html?id=4" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="blog-card" data-aos="fade-up" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/led_showcase.png" alt="LED Pixel Pitch">
+                            <div class="post-category">Technical</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> February 20, 2025</span>
+                                <span><i class="far fa-user"></i> By Rajesh Mehta</span>
+                            </div>
+                            <h3>Understanding LED Pixel Pitch: A Complete Guide for Buyers</h3>
+                            <p class="post-excerpt">What is pixel pitch and why does it matter? Learn how to choose the right pitch for your application and viewing distance.</p>
+                            <div class="post-tags">
+                                <span class="tag">LED</span>
+                                <span class="tag">Technical</span>
+                                <span class="tag">Buying Guide</span>
+                            </div>
+                            <a href="blog-post.html?id=5" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 5 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="50" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Acrylic Maintenance">
+                            <div class="post-category">Maintenance</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> February 15, 2025</span>
+                                <span><i class="far fa-user"></i> By Priya Sharma</span>
+                            </div>
+                            <h3>How to Clean and Maintain Acrylic Products: Pro Tips for Longevity</h3>
+                            <p class="post-excerpt">Keep your acrylic displays looking new with these professional cleaning techniques and maintenance tips.</p>
+                            <div class="post-tags">
+                                <span class="tag">Acrylic</span>
+                                <span class="tag">Maintenance</span>
+                                <span class="tag">Cleaning</span>
+                            </div>
+                            <a href="blog-post.html?id=6" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 6 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/led_showcase.png" alt="Office Design">
+                            <div class="post-category">Design</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> February 10, 2025</span>
+                                <span><i class="far fa-user"></i> By Anjali Desai</span>
+                            </div>
+                            <h3>10 Creative Ways to Use Whiteboards in Modern Office Design</h3>
+                            <p class="post-excerpt">Beyond meeting rooms - discover innovative ways to incorporate whiteboards into office interiors for better collaboration and aesthetics.</p>
+                            <div class="post-tags">
+                                <span class="tag">Office Design</span>
+                                <span class="tag">Whiteboards</span>
+                                <span class="tag">Creativity</span>
+                            </div>
+                            <a href="blog-post.html?id=7" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 7 -->
+                    <div class="blog-card" data-aos="fade-up" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Digital Signage">
+                            <div class="post-category">Trends</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> February 5, 2025</span>
+                                <span><i class="far fa-user"></i> By Vikram Singh</span>
+                            </div>
+                            <h3>Digital Signage Trends for 2025: What's Hot in the Industry</h3>
+                            <p class="post-excerpt">From interactive displays to AI-powered content, explore the latest trends in digital signage and how to leverage them.</p>
+                            <div class="post-tags">
+                                <span class="tag">Digital Signage</span>
+                                <span class="tag">Trends</span>
+                                <span class="tag">2025</span>
+                            </div>
+                            <a href="blog-post.html?id=8" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 8 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="50" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/led_showcase.png" alt="Sustainability">
+                            <div class="post-category">Sustainability</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> January 28, 2025</span>
+                                <span><i class="far fa-user"></i> By Rajesh Mehta</span>
+                            </div>
+                            <h3>Sustainable Signage: How LED Displays Are Becoming More Eco-Friendly</h3>
+                            <p class="post-excerpt">Discover the environmental benefits of modern LED technology and how we're reducing our carbon footprint.</p>
+                            <div class="post-tags">
+                                <span class="tag">Sustainability</span>
+                                <span class="tag">Environment</span>
+                                <span class="tag">LED</span>
+                            </div>
+                            <a href="blog-post.html?id=9" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Post 9 -->
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <div class="blog-card-image">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Nano Clean">
+                            <div class="post-category">Technology</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                <span><i class="far fa-calendar"></i> January 20, 2025</span>
+                                <span><i class="far fa-user"></i> By Priya Sharma</span>
+                            </div>
+                            <h3>Nano Clean™ Technology: The Science Behind Self-Cleaning Whiteboards</h3>
+                            <p class="post-excerpt">How our proprietary Nano Clean™ surface treatment works and why it's revolutionizing the whiteboard industry.</p>
+                            <div class="post-tags">
+                                <span class="tag">Nano Clean</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <a href="blog-post.html?id=10" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" data-aos="fade-up">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">5</a>
+                    <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">Browse by Topic</span>
+                    <h2 class="section-title">Article <span>Categories</span></h2>
+                </div>
+
+                <div class="categories-grid">
+                    <a href="#" class="category-item" data-aos="zoom-in">
+                        <i class="fas fa-tv"></i>
+                        <span>LED Technology</span>
+                        <span class="count">12 Articles</span>
+                    </a>
+                    <a href="#" class="category-item" data-aos="zoom-in" data-aos-delay="50">
+                        <i class="fas fa-cube"></i>
+                        <span>Acrylic Guide</span>
+                        <span class="count">8 Articles</span>
+                    </a>
+                    <a href="#" class="category-item" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-chalkboard"></i>
+                        <span>Whiteboards</span>
+                        <span class="count">10 Articles</span>
+                    </a>
+                    <a href="#" class="category-item" data-aos="zoom-in" data-aos-delay="150">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Case Studies</span>
+                        <span class="count">6 Articles</span>
+                    </a>
+                    <a href="#" class="category-item" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Industry Trends</span>
+                        <span class="count">5 Articles</span>
+                    </a>
+                    <a href="#" class="category-item" data-aos="zoom-in" data-aos-delay="250">
+                        <i class="fas fa-tools"></i>
+                        <span>Maintenance</span>
+                        <span class="count">4 Articles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card" data-aos="zoom-in">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Never Miss an Article</h3>
+                    <p>Subscribe to our newsletter and get the latest insights delivered straight to your inbox</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">Subscribe Now</button>
+                    </form>
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo">
+                    <!-- Replace with your actual logo path -->
+                    <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                </a>
+                <p class="footer-description">
+                    India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html?category=led">LED Displays</a></li>
+                    <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                    <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                    <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                    <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-cyan-400"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.1.5/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+            offset: 50
+        });
+    </script>
+
+    <style>
+        .subscribe-bar {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .subscribe-content {
+            text-align: center;
+        }
+
+        .subscribe-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .subscribe-content p {
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            background: var(--dark-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .subscribe-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .subscribe-form button {
+            padding: 1rem 2rem;
+            white-space: nowrap;
+        }
+
+        .featured-post {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .featured-post-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .featured-post-image {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .featured-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .featured-post-content {
+            padding: 2rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-meta i {
+            margin-right: 0.3rem;
+            color: var(--primary);
+        }
+
+        .featured-post-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .post-excerpt {
+            color: var(--gray-300);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--gray-300);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .blog-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .blog-card-image {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card-content h3 {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .page-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .page-link:hover,
+        .page-link.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .page-link.next {
+            width: auto;
+            padding: 0 1.5rem;
+            border-radius: 40px;
+        }
+
+        .categories-section {
+            background: linear-gradient(135deg, var(--dark-light), var(--dark));
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+        }
+
+        .category-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .category-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .category-item span {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-item .count {
+            color: var(--gray-400);
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+
+        .newsletter-section {
+            padding: 4rem 0;
+        }
+
+        .newsletter-card {
+            background: var(--gradient-primary);
+            border-radius: 40px;
+            padding: 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .newsletter-card i {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .newsletter-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group input {
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .newsletter-card .btn-primary {
+            background: white;
+            color: var(--primary);
+            width: 100%;
+        }
+
+        .newsletter-card .btn-primary:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .privacy-note {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .featured-post-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post-image {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .subscribe-form {
+                flex-direction: column;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-group {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</body>
+</html>

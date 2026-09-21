@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Project Gallery - Mr. Fixon | LED Installations, Acrylic Work & Whiteboard Projects</title>
+    <meta name="title" content="Project Gallery - Mr. Fixon | LED Installations, Acrylic Work & Whiteboard Projects">
+    <meta name="description" content="Explore our portfolio of 5000+ successful projects across India. View LED display installations, custom acrylic creations, and premium whiteboard setups for corporate offices, malls, and institutions.">
+    <meta name="keywords" content="LED installation gallery, acrylic projects India, whiteboard installations, digital signage portfolio, Mr. Fixon projects">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/gallery.html">
+    <meta property="og:title" content="Project Gallery - Mr. Fixon | LED Installations, Acrylic Work & Whiteboard Projects">
+    <meta property="og:description" content="Explore our portfolio of 5000+ successful projects across India.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/gallery-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/gallery.html">
+    <meta property="twitter:title" content="Project Gallery - Mr. Fixon | LED Installations, Acrylic Work & Whiteboard Projects">
+    <meta property="twitter:description" content="Explore our portfolio of 5000+ successful projects across India.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/gallery-og.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/gallery.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Mr. Fixon Project Gallery",
+        "description": "Portfolio of LED display installations, acrylic products, and whiteboard projects",
+        "image": [
+            {
+                "@type": "ImageObject",
+                "contentUrl": "assets/images/led_showcase.png",
+                "name": "Mall LED Installation"
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "assets/images/acrylic_workshop_showcase.png",
+                "name": "Acrylic Trophies"
+            }
+        ]
+    }
+    </script>
+
+        <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Add these logo sizing rules to your style.css file */
+
+/* Navbar Logo - Fixed Size */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 50px; /* Fixed height container */
+}
+
+.logo-img {
+    height: 40px; /* Fixed height */
+    width: auto;
+    max-width: 150px; /* Maximum width constraint */
+    object-fit: contain;
+    transition: all var(--transition-fast);
+}
+
+.navbar.scrolled .logo-img {
+    height: 35px; /* Slightly smaller when scrolled */
+}
+
+/* Footer Logo - Fixed Size */
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+    height: 45px; /* Slightly larger in footer */
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+/* Loading Screen Logo - Properly Sized */
+.loading-screen .loader-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.loading-screen .logo-image {
+    max-width: 250px; /* Maximum width */
+    width: 80%; /* Responsive width */
+    height: auto;
+    max-height: 120px; /* Maximum height constraint */
+    object-fit: contain;
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+/* Mobile Menu Logo (if needed) */
+.mobile-menu .nav-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: auto;
+}
+
+.mobile-menu .logo-img {
+    height: 35px;
+    max-width: 120px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .footer-logo-img {
+        height: 40px;
+        max-width: 150px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 200px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 100px;
+    }
+    
+    .footer-logo-img {
+        height: 35px;
+        max-width: 130px;
+    }
+    
+    .loading-screen .logo-image {
+        max-width: 180px;
+        max-height: 80px;
+    }
+}
+
+/* Animation for loading logo */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        </style>
+</head>
+<body>
+
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <!-- Replace with your actual logo path -->
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" class="logo-img">
+        </a>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="gallery.html" class="nav-link active">Gallery</a>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Project <span>Gallery</span></h1>
+                <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Gallery</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Intro -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <p class="text-xl text-gray-300 mb-8">
+                        Take a visual journey through our finest work. From massive LED installations at prestigious malls to delicate acrylic craftsmanship and innovative whiteboard solutions, see how we've transformed spaces across India.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section class="section-padding pt-0">
+            <div class="container">
+                <div class="filter-container" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="led">LED Installations</button>
+                    <button class="filter-btn" data-filter="acrylic">Acrylic Work</button>
+                    <button class="filter-btn" data-filter="whiteboard">Whiteboard Projects</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate</button>
+                </div>
+
+                <!-- Gallery Stats -->
+                <div class="gallery-stats" data-aos="fade-up" data-aos-delay="50">
+                    <div class="stat-badge">
+                        <i class="fas fa-image"></i>
+                        <span><span id="visibleCount">24</span> of <span id="totalCount">48</span> Projects</span>
+                    </div>
+                </div>
+
+                <!-- Masonry Gallery -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- LED Category -->
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Outdoor LED Screen - Phoenix Mall, Mumbai">
+                            <img src="assets/images/led_showcase.png" alt="Outdoor LED Display at Shopping Mall" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Phoenix Mall LED Installation</h4>
+                                <p>P10 Outdoor · 20ft x 15ft · 6500 nits</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in" data-aos-delay="50">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Indoor LED Screen - Corporate Lobby">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Indoor LED Screen in Corporate Lobby" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Tech Park Lobby Display</h4>
+                                <p>P6 Indoor · 12ft x 8ft · 4K Resolution</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Circle LED Display - Restaurant">
+                            <img src="assets/images/led_showcase.png" alt="Circle LED Display in Restaurant" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>The Circle Restaurant</h4>
+                                <p>P8 Circle LED · 48" diameter · 360° View</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in" data-aos-delay="150">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Taxi Top LED - Fleet Advertising">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Taxi Top LED Display Fleet" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>City Taxi Fleet</h4>
+                                <p>50 Vehicles · GPS Enabled · Remote Managed</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in" data-aos-delay="200">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Stadium LED Display - Cricket Ground">
+                            <img src="assets/images/led_showcase.png" alt="Stadium LED Display" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>DY Patil Stadium</h4>
+                                <p>P10 Outdoor · 100ft x 30ft · High Brightness</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="led" data-aos="zoom-in" data-aos-delay="250">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Airport LED Display - Terminal 2">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Airport LED Display" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Mumbai International Airport</h4>
+                                <p>P4 Fine Pitch · Flight Information Display</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Acrylic Category -->
+                    <div class="gallery-item" data-category="acrylic" data-aos="zoom-in">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Custom Acrylic Trophies - Corporate Awards">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Acrylic Trophies" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Annual Corporate Awards</h4>
+                                <p>50 Custom Trophies · Laser Engraved</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="acrylic" data-aos="zoom-in" data-aos-delay="50">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Acrylic Menu Stands - Cafe Coffee Day">
+                            <img src="assets/images/led_showcase.png" alt="Acrylic Menu Stands in Cafe" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Cafe Coffee Day</h4>
+                                <p>200+ Menu Stands · Pan-India Supply</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="acrylic" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Acrylic Donation Box - Siddhivinayak Temple">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Acrylic Donation Box" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Siddhivinayak Temple</h4>
+                                <p>Security Donation Boxes · Lockable Design</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="acrylic" data-aos="zoom-in" data-aos-delay="150">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Cosmetic Display Stands - Nykaa Store">
+                            <img src="assets/images/led_showcase.png" alt="Acrylic Cosmetic Stands" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Nykaa Flagship Store</h4>
+                                <p>Modular Display System · 50+ Units</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="acrylic" data-aos="zoom-in" data-aos-delay="200">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Acrylic Signage - Corporate Office">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Acrylic Signage" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Google India Office</h4>
+                                <p>Custom Acrylic Signage · LED Backlit</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Whiteboard Category -->
+                    <div class="gallery-item" data-category="whiteboard" data-aos="zoom-in">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Glass Whiteboard Installation - Boardroom">
+                            <img src="assets/images/led_showcase.png" alt="Glass Whiteboard in Boardroom" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Deloitte Boardroom</h4>
+                                <p>85" Glass Magnetic · Nano Clean™</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="whiteboard" data-aos="zoom-in" data-aos-delay="50">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Mobile Easel Setup - Training Center">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Mobile Easel in Training Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>NIIT Training Center</h4>
+                                <p>20 Mobile Easels · Height Adjustable</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="whiteboard" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Felt Notice Board - Hospital">
+                            <img src="assets/images/led_showcase.png" alt="Felt Notice Board in Hospital" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Apollo Hospitals</h4>
+                                <p>Multi-color Felt Boards · Department Directories</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="whiteboard" data-aos="zoom-in" data-aos-delay="150">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Magnetic Whiteboard - School Classroom">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Magnetic Whiteboard in Classroom" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Podar International School</h4>
+                                <p>50 Classrooms · Magnetic Steel Surface</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Corporate Category -->
+                    <div class="gallery-item" data-category="corporate" data-aos="zoom-in">
+                        <a href="assets/images/led_showcase.png" data-lightbox="gallery" data-title="Complete Office Solution - TCS Campus">
+                            <img src="assets/images/led_showcase.png" alt="TCS Campus Office Solution" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>TCS Campus, Mumbai</h4>
+                                <p>Complete Office Fit-out · LED + Whiteboards</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-delay="50">
+                        <a href="assets/images/acrylic_workshop_showcase.png" data-lightbox="gallery" data-title="Conference Room Setup - Microsoft">
+                            <img src="assets/images/acrylic_workshop_showcase.png" alt="Microsoft Conference Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h4>Microsoft India</h4>
+                                <p>12 Conference Rooms · Glass Boards + LED</p>
+                                <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <button class="btn-outline load-more-btn" id="loadMoreBtn">
+                        Load More Projects <i class="fas fa-arrow-down ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Video Section -->
+        <section class="video-showcase section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">In Action</span>
+                    <h2 class="section-title">Featured <span>Installation</span></h2>
+                </div>
+
+                <div class="video-grid" data-aos="zoom-in">
+                    <div class="video-card">
+                        <video poster="/assets/images/video-poster-1.jpg" controls>
+                            <source src="https://cdn.pixabay.com/video/2024/01/18/196893-903963347_large.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-info">
+                            <h4>Mega LED Installation at Phoenix Mall</h4>
+                            <p>Watch the installation process of our largest outdoor LED screen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Categories -->
+        <section class="categories-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-subtitle">By Industry</span>
+                    <h2 class="section-title">Projects Across <span>Sectors</span></h2>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-stat-card" data-aos="fade-up" data-tilt>
+                        <i class="fas fa-shopping-mall"></i>
+                        <h4>Retail & Malls</h4>
+                        <p>150+ Projects</p>
+                    </div>
+                    <div class="category-stat-card" data-aos="fade-up" data-aos-delay="50" data-tilt>
+                        <i class="fas fa-building"></i>
+                        <h4>Corporate Offices</h4>
+                        <p>300+ Projects</p>
+                    </div>
+                    <div class="category-stat-card" data-aos="fade-up" data-aos-delay="100" data-tilt>
+                        <i class="fas fa-school"></i>
+                        <h4>Education</h4>
+                        <p>200+ Projects</p>
+                    </div>
+                    <div class="category-stat-card" data-aos="fade-up" data-aos-delay="150" data-tilt>
+                        <i class="fas fa-hospital"></i>
+                        <h4>Healthcare</h4>
+                        <p>100+ Projects</p>
+                    </div>
+                    <div class="category-stat-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
+                        <i class="fas fa-hotel"></i>
+                        <h4>Hospitality</h4>
+                        <p>120+ Projects</p>
+                    </div>
+                    <div class="category-stat-card" data-aos="fade-up" data-aos-delay="250" data-tilt>
+                        <i class="fas fa-church"></i>
+                        <h4>Religious</h4>
+                        <p>80+ Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial from Gallery -->
+        <section class="testimonial-spotlight">
+            <div class="container">
+                <div class="spotlight-card" data-aos="zoom-in">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p class="spotlight-text">"The LED installation at our mall has increased footfall by 40%. Mr. Fixon delivered beyond our expectations with flawless execution and ongoing support."</p>
+                    <div class="spotlight-author">
+                        <img src="assets/images/suresh_iyer.png" alt="Client" class="author-image">
+                        <div>
+                            <h4>Vikram Mehta</h4>
+                            <p>VP Operations, Phoenix Mall</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">Have a Project in Mind?</h2>
+                    <p class="cta-text">Let's create something amazing together</p>
+                    <a href="contact.html" class="btn-primary btn-large">
+                        Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo">
+                    <!-- Replace with your actual logo path -->
+                    <img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img">
+                </a>
+                <p class="footer-description">
+                    India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html?category=led">LED Displays</a></li>
+                    <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                    <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                    <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                    <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-cyan-400"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.1.5/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script src="/assets/js/gallery.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+            offset: 50
+        });
+
+        // Gallery specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const visibleCount = document.getElementById('visibleCount');
+            const totalCount = document.getElementById('totalCount');
+            
+            if (totalCount) {
+                totalCount.textContent = galleryItems.length;
+            }
+            
+            function updateVisibleCount() {
+                if (visibleCount) {
+                    const visible = Array.from(galleryItems).filter(item => 
+                        window.getComputedStyle(item).display !== 'none'
+                    ).length;
+                    visibleCount.textContent = visible;
+                }
+            }
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const category = item.getAttribute('data-category');
+                            item.style.display = category === filterValue ? 'block' : 'none';
+                        }
+                    });
+                    
+                    updateVisibleCount();
+                    
+                    // Refresh masonry layout if needed
+                    if (window.masonry) {
+                        window.masonry.layout();
+                    }
+                });
+            });
+            
+            updateVisibleCount();
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // Simulate loading more images
+                    this.innerHTML = 'Loading... <i class="fas fa-spinner fa-spin ml-2"></i>';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'Load More Projects <i class="fas fa-arrow-down ml-2"></i>';
+                        alert('More projects will be loaded dynamically from your server. This is a demo version.');
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .gallery-stats {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            color: var(--gray-300);
+        }
+        
+        .stat-badge i {
+            color: var(--primary);
+        }
+        
+        .view-project {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project i {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .view-project i {
+            transform: translateX(5px);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .video-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        
+        .video-card video {
+            width: 100%;
+            display: block;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .video-info p {
+            color: var(--gray-400);
+        }
+        
+        .categories-section {
+            background: linear-gradient(135deg, var(--dark-light), var(--dark));
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .category-stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .category-stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .category-stat-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .category-stat-card h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: white;
+        }
+        
+        .category-stat-card p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-spotlight {
+            padding: 4rem 0;
+        }
+        
+        .spotlight-card {
+            background: var(--gradient-primary);
+            border-radius: 30px;
+            padding: 3rem;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .spotlight-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: white;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .spotlight-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+        
+        .spotlight-author h4 {
+            color: white;
+            margin-bottom: 0.2rem;
+        }
+        
+        .spotlight-author p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .spotlight-card {
+                padding: 2rem;
+            }
+            
+            .spotlight-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

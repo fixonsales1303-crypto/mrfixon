@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mr. Fixon | 30+ Years LED Display & Signage Excellence</title>
+    <meta name="description" content="Learn about Mr. Fixon's 30+ year legacy in LED displays, acrylic products, and whiteboard manufacturing. Meet our founder Mr. Bechar Patel.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root{
+            --primary: #f97316;
+            --secondary: #ffb347;
+        }
+        /* ---------- Global Styles ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e5e7eb;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Clash Display', 'Inter', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- Navbar (Fixed) ---------- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link, .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active,
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after, .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after,
+        .nav-menu a:hover::after, .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .btn-glow {
+            background: #ff6b22;
+            background: linear-gradient(135deg, #ff7426, #f95a00);
+            color: #ffffff !important;
+            padding: 0.7rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.2px;
+            border: none;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.35);
+            white-space: nowrap;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(249, 115, 22, 0.55);
+            background: linear-gradient(135deg, #ff7e36, #ff640a);
+            color: #ffffff !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .mobile-menu-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu-links a:hover {
+            color: #f97316;
+        }
+
+        /* ---------- Page Header ---------- */
+        .page-header {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .page-title span {
+            background: linear-gradient(135deg, #f97316, #ff8c42);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .breadcrumb {
+            color: #9ca3af;
+        }
+
+        .breadcrumb a {
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        /* ---------- Founder Section (Redesigned) ---------- */
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .image-frame {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border-left: 4px solid #f97316;
+        }
+
+        .experience-badge .years {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f97316;
+            line-height: 1;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f97316;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title span {
+            color: #f97316;
+        }
+
+        .founder-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #ff8c42;
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid #f97316;
+        }
+
+        .founder-text {
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .founder-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-item:hover {
+            border-color: #f97316;
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #f97316;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        /* ---------- Timeline ---------- */
+        .history-section {
+            background: linear-gradient(135deg, #0f0f0f, #0a0a0a);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, #f97316, #ff8c42, transparent);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            margin-left: 50%;
+            justify-content: flex-start;
+            padding-left: 30px;
+            padding-right: 0;
+        }
+
+        .timeline-year {
+            position: absolute;
+            right: -60px;
+            top: 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #f97316;
+            background: #1a1a1a;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -60px;
+            right: auto;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            border-color: #f97316;
+            transform: translateX(5px);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #f97316;
+        }
+
+        /* ---------- Value Cards ---------- */
+        .bg-gradient {
+            background: linear-gradient(135deg, #0f0f0f, #0a0a0a);
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 28px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-color: #f97316;
+            box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.2);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f97316, #ff6b35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* ---------- Team Grid ---------- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: #f97316;
+        }
+
+        .team-image {
+            aspect-ratio: 1;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .team-card:hover .team-image img {
+            transform: scale(1.1);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .team-info p {
+            color: #f97316;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0b0b0;
+            transition: all 0.3s;
+        }
+
+        .team-social a:hover {
+            background: #f97316;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ---------- Achievements ---------- */
+        .achievements-section {
+            background: linear-gradient(135deg, #0f0f0f, #0a0a0a);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            border-color: #f97316;
+        }
+
+        .achievement-card i {
+            font-size: 2.5rem;
+            color: #f97316;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- Strengths ---------- */
+        .strengths-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .strength-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .strength-item:hover {
+            border-color: #f97316;
+            transform: translateX(10px);
+        }
+
+        .strength-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #f97316, #ff6b35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .strength-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .strength-content p {
+            color: #b0b0b0;
+        }
+
+        /* ---------- CTA ---------- */
+        .cta-banner {
+            background: linear-gradient(135deg, #f97316, #ff6b35);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: white;
+            color: #f97316;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            background: #050505;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(249, 115, 22, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        .footer-logo-img {
+            height: 45px;
+            width: auto;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+            margin: 1rem 0;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            margin-right: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: #f97316;
+            color: white;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul, .footer-contact ul {
+            list-style: none;
+        }
+
+        .footer-links li, .footer-contact li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a, .footer-contact li {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #f97316;
+        }
+
+        .footer-contact i {
+            color: #f97316;
+            margin-right: 0.8rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #6b7280;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 992px) {
+            .nav-menu { display: none; }
+            .menu-toggle { display: block; }
+            .founder-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .timeline::before { left: 30px; }
+            .timeline-item { width: 100%; padding-left: 60px; padding-right: 0; justify-content: flex-start; }
+            .timeline-item:nth-child(even) { margin-left: 0; padding-left: 60px; }
+            .timeline-year { left: 0 !important; right: auto !important; top: -20px; font-size: 1rem; }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid { grid-template-columns: 1fr; }
+            .achievements-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .strength-item { flex-direction: column; text-align: center; }
+            .page-title { font-size: 2.5rem; }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 45px;
+            height: 45px;
+            background: #f97316;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            z-index: 99;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" style="height:42px;">
+        </a>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<main>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">About <span>Mr. Fixon</span></h1>
+            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section-padding" style="padding: 80px 0;">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="assets/images/founder.png" alt="Mr. Bechar Patel">
+                        <div class="experience-badge">
+                            <div class="years">30+</div>
+                            <div class="text">Years of Leadership</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="founder-content" data-aos="fade-left">
+                    <span class="section-subtitle">Our Mentor & Founder</span>
+                    <h2 class="section-title">Mr. <span>Bechar Patel</span></h2>
+                    <p class="founder-quote">"Quality is not an act, it's a habit that we've cultivated for over three decades."</p>
+                    <p class="founder-text">With over 30 years of industry experience, Mr. Bechar Patel has guided Mr. Fixon to become a trusted name in display and signage solutions across India. His journey began in 1996 with a small workshop in Mumbai, driven by a vision to provide premium quality products at competitive prices.</p>
+                    <p class="founder-text">Under his leadership, we've consistently delivered products that exceed customer expectations while maintaining the highest standards of manufacturing excellence. His philosophy of continuous innovation and customer-centric approach has been the cornerstone of our success.</p>
+                    <div class="founder-stats">
+                        <div class="stat-item"><div class="stat-number">30+</div><div class="stat-label">Years Experience</div></div>
+                        <div class="stat-item"><div class="stat-number">5000+</div><div class="stat-label">Happy Clients</div></div>
+                        <div class="stat-item"><div class="stat-number">250+</div><div class="stat-label">Products</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section class="history-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Our Journey</span>
+                <h2 class="section-title">From 1996 to <span>Today</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right"><div class="timeline-year">1996</div><div class="timeline-content"><h3>The Beginning</h3><p>Siddhi Sales established in Mumbai, starting with acrylic products and basic signage solutions.</p></div></div>
+                <div class="timeline-item" data-aos="fade-left"><div class="timeline-year">2005</div><div class="timeline-content"><h3>LED Innovation</h3><p>Expanded into LED displays, introducing outdoor and indoor screens. First major installation for a shopping mall in Mumbai.</p></div></div>
+                <div class="timeline-item" data-aos="fade-right"><div class="timeline-year">2010</div><div class="timeline-content"><h3>Infrastructure Expansion</h3><p>Moved to a larger 25,000 sq. ft. facility with state-of-the-art manufacturing equipment.</p></div></div>
+                <div class="timeline-item" data-aos="fade-left"><div class="timeline-year">2015</div><div class="timeline-content"><h3>Brand Evolution</h3><p>Rebranded as "Mr. Fixon" to better serve corporate clients. Launched premium product lines.</p></div></div>
+                <div class="timeline-item" data-aos="fade-right"><div class="timeline-year">2020</div><div class="timeline-content"><h3>Whiteboard Excellence</h3><p>Launched premium glass whiteboards with Nano Clean™ technology. Received ISO 9001:2015 certification.</p></div></div>
+                <div class="timeline-item" data-aos="fade-left"><div class="timeline-year">2025</div><div class="timeline-content"><h3>Pan-India Presence</h3><p>Serving 5000+ clients across India with comprehensive display solutions. Team of 50+ dedicated professionals.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values -->
+    <section class="bg-gradient" style="padding: 80px 0;">
+        <div class="container">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="value-card" data-aos="fade-up"><div class="value-icon"><i class="fas fa-bullseye"></i></div><h3>Our Mission</h3><p>To provide innovative, high-quality display solutions that empower businesses to communicate effectively and leave lasting impressions.</p></div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100"><div class="value-icon"><i class="fas fa-eye"></i></div><h3>Our Vision</h3><p>To be India's most trusted and preferred partner for all display and signage needs, setting benchmarks in quality and innovation.</p></div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200"><div class="value-icon"><i class="fas fa-heart"></i></div><h3>Our Values</h3><p>Integrity, Innovation, Customer-Centricity, and Excellence in everything we do, every single day.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up"><span class="section-subtitle">Our Leaders</span><h2 class="section-title">Meet the <span>Team</span></h2></div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up"><div class="team-image"><img src="assets/images/suresh_iyer.png" alt="Bechar Patel"></div><div class="team-info"><h4>Bechar Patel</h4><p>Founder & CEO</p><div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div></div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100"><div class="team-image"><img src="assets/images/anjali_menon.png" alt="Rahul Mehta"></div><div class="team-info"><h4>Rahul Mehta</h4><p>Head of Operations</p><div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div></div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200"><div class="team-image"><img src="assets/images/team_member_profile.png" alt="Priya Sharma"></div><div class="team-info"><h4>Priya Sharma</h4><p>Design Director</p><div class="team-social"><a href="#"><i class="fab fa-instagram"></i></a></div></div></div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300"><div class="team-image"><img src="assets/images/rohan_gupta.png" alt="Vikram Singh"></div><div class="team-info"><h4>Vikram Singh</h4><p>Technical Head</p><div class="team-social"><a href="#"><i class="fab fa-github"></i></a></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up"><span class="section-subtitle">Our Achievements</span><h2 class="section-title">Recognized for <span>Excellence</span></h2></div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="zoom-in"><i class="fas fa-trophy"></i><h4>Best LED Manufacturer</h4><p>Signage India Awards 2023</p></div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-certificate"></i><h4>ISO 9001:2015</h4><p>Quality Management Certified</p></div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-star"></i><h4>Exporter of the Year</h4><p>MSME Awards 2022</p></div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-shield-alt"></i><h4>CE Certified</h4><p>European Safety Standards</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Strengths -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up"><span class="section-subtitle">Why Choose Us</span><h2 class="section-title">Our Core <span>Strengths</span></h2></div>
+            <div class="strengths-grid">
+                <div class="strength-item" data-aos="fade-right"><div class="strength-icon"><i class="fas fa-industry"></i></div><div class="strength-content"><h4>Advanced Manufacturing</h4><p>25,000 sq. ft. facility with CNC machines, laser cutters, and automated assembly lines</p></div></div>
+                <div class="strength-item" data-aos="fade-right" data-aos-delay="100"><div class="strength-icon"><i class="fas fa-flask"></i></div><div class="strength-content"><h4>R&D Excellence</h4><p>Dedicated R&D team constantly innovating new products and improving existing ones</p></div></div>
+                <div class="strength-item" data-aos="fade-right" data-aos-delay="200"><div class="strength-icon"><i class="fas fa-check-double"></i></div><div class="strength-content"><h4>Quality Control</h4><p>7-stage quality check process ensuring zero-defect products</p></div></div>
+                <div class="strength-item" data-aos="fade-right" data-aos-delay="300"><div class="strength-icon"><i class="fas fa-headset"></i></div><div class="strength-content"><h4>Customer Support</h4><p>24/7 dedicated support team for all your queries and concerns</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in"><h2 class="cta-title">Ready to Work With Us?</h2><p class="cta-text">Let's discuss how we can bring your vision to life</p><a href="contact.html" class="btn-primary">Get In Touch <i class="fas fa-arrow-right ml-2"></i></a></div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div><a href="index.html"><img src="/assets/images/logo.png" alt="Mr. Fixon" class="footer-logo-img"></a><p class="footer-description">India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996.</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-links"><h4>Products</h4><ul><li><a href="products.html?category=led">LED Displays</a></li><li><a href="products.html?category=acrylic">Acrylic Products</a></li><li><a href="products.html?category=whiteboard">Whiteboards</a></li></ul></div>
+            <div class="footer-contact"><h4>Contact Info</h4><ul><li><i class="fas fa-phone-alt"></i> +91 83848 58678</li><li><i class="fas fa-envelope"></i> info@mrfixon.com</li><li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart text-orange-500"></i> in India</p></div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+<a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+    
+    // Navbar & Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    if(menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+    if(closeMenu) closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    
+    // Back to top
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 500) backToTop.classList.add('visible');
+        else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) navbar.style.background = 'rgba(10,10,10,0.98)';
+        else navbar.style.background = 'rgba(10,10,10,0.95)';
+    });
+</script>
+</body>
+</html>

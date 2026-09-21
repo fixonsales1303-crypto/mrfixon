@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions Since 1996</title>
+    <meta name="title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions Since 1996">
+    <meta name="description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards. 30+ years of excellence serving 5000+ happy clients across India.">
+    <meta name="keywords" content="LED displays, acrylic products, whiteboards, signage solutions, digital signage, glass whiteboards, LED screens, acrylic stands, Mumbai, India">
+    <meta name="author" content="Mr. Fixon">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mrfixon.com/">
+    <meta property="og:title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="og:description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996.">
+    <meta property="og:image" content="https://www.mrfixon.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mrfixon.com/">
+    <meta property="twitter:title" content="Mr. Fixon - Premium LED Displays, Acrylic & Whiteboard Solutions">
+    <meta property="twitter:description" content="India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996.">
+    <meta property="twitter:image" content="https://www.mrfixon.com/assets/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.mrfixon.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #f97316;
+            --primary-dark: #ea580c;
+            --primary-light: #ff8c42;
+            --secondary: #ffb347;
+            --accent: #ffd966;
+            --dark: #0a0a0a;
+            --darker: #050505;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.1);
+            border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 42px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .btn-glow {
+            background: #ff6b22;
+            background: linear-gradient(135deg, #ff7426, #f95a00);
+            color: #ffffff !important;
+            padding: 0.7rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.2px;
+            border: none;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.35);
+            white-space: nowrap;
+        }
+        
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(249, 115, 22, 0.55);
+            background: linear-gradient(135deg, #ff7e36, #ff640a);
+            color: #ffffff !important;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .mobile-menu-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .mobile-menu-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .filter-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 2rem;
+            background: rgba(249, 115, 22, 0.1);
+            border: 2px solid transparent;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(249, 115, 22, 0.2);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+        
+        /* Image Display Fix */
+        .product-image-container img,
+        .product-image {
+            object-fit: contain !important;
+            object-position: center !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: #ffffff;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-image-container {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background: #ffffff;
+            overflow: hidden;
+            position: relative;
+            display: block;
+        }
+        
+        /* Category Header */
+        .category-header {
+            margin: 4rem 0 2rem;
+            text-align: center;
+        }
+        
+        .category-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* LED & Digital - Yellow-Orange-White Gradient Containers */
+        .product-card[data-category="led-digital"] {
+            background: linear-gradient(135deg, #fff8e7 0%, #ffdd99 30%, #ffb347 70%, #f97316 100%);
+            border: none;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .product-card[data-category="led-digital"]:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.5);
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe5b4 30%, #ffc46b 70%, #ff8c42 100%);
+        }
+        
+        /* LED Category Text Styling - Dark for readability */
+        .product-card[data-category="led-digital"] .product-category {
+            color: #b83b00;
+            font-weight: 700;
+        }
+        
+        .product-card[data-category="led-digital"] h3 {
+            color: #2c2c2c;
+            font-weight: 800;
+        }
+        
+        .product-card[data-category="led-digital"] .product-description {
+            color: #4a4a4a;
+        }
+        
+        .product-card[data-category="led-digital"] .feature-tag {
+            background: rgba(249, 115, 22, 0.25);
+            color: #b83b00;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+        
+        .product-card[data-category="led-digital"] .btn-quote {
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            color: white;
+        }
+        
+        .product-card[data-category="led-digital"] .btn-quote:hover {
+            background: linear-gradient(135deg, #000000, #2c2c2c);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Other Categories - Orange Themed Glassmorphism */
+        .product-card[data-category="sign-boards"],
+        .product-card[data-category="safety"],
+        .product-card[data-category="boards"] {
+            background: rgba(249, 115, 22, 0.08);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .product-card[data-category="sign-boards"]:hover,
+        .product-card[data-category="safety"]:hover,
+        .product-card[data-category="boards"]:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.2);
+            background: rgba(249, 115, 22, 0.15);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .product-info { padding: 1.5rem; }
+        
+        .product-category {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .product-description {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-tag {
+            background: rgba(249, 115, 22, 0.15);
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .btn-quote {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 4rem 0 2rem;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(249, 115, 22, 0.1);
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-info .footer-logo img {
+            height: 45px;
+            width: auto;
+        }
+        
+        .footer-description {
+            color: #9ca3af;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul, .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li, .footer-contact ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-contact ul li {
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .footer-contact ul li i {
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .category-header h2 { font-size: 2rem; }
+            .nav-menu { display: none; }
+            .menu-toggle { display: block; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { display: none; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="/assets/images/logo.png" alt="Mr. Fixon" style="height: 42px; width: auto;">
+        </a>
+        
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="products.html" class="nav-link active">Products</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="contact.html" class="btn-glow">Get Quote</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="infrastructure.html">Infrastructure</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <h1 data-aos="fade-up">Our Products</h1>
+    <p data-aos="fade-up" style="color: #9ca3af; font-size: 1.25rem; max-width: 700px; margin: 0 auto;">Discover our comprehensive range of premium sign boards, LED displays, and safety signage</p>
+</section>
+
+<!-- Products -->
+<section class="filter-section">
+    <div class="search-box" data-aos="fade-up">
+        <i class="fas fa-search"></i>
+        <input type="text" id="productSearch" placeholder="Search products...">
+    </div>
+
+    <div class="filter-buttons" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="led-digital">LED & Digital</button>
+        <button class="filter-btn" data-filter="sign-boards">Sign Boards</button>
+        <button class="filter-btn" data-filter="safety">Safety Signage</button>
+        <button class="filter-btn" data-filter="boards">Boards & Displays</button>
+    </div>
+
+    <!-- LED & Digital Category - Yellow-Orange-White Gradient Containers -->
+    <div class="category-header" data-category="led-digital">
+        <h2>LED & Digital Sign Boards</h2>
+        <p style="color: #9ca3af;">High-brightness digital displays and LED solutions with premium yellow-orange-white gradient design</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><span class="product-badge">Popular</span><img src="assets/images/acp_signboard.png" alt="LED Sign Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>LED Sign Board</h3><p class="product-description">High-brightness outdoor LED display perfect for advertising and brand visibility.</p><div class="product-features"><span class="feature-tag">Outdoor</span><span class="feature-tag">Weatherproof</span><span class="feature-tag">6500 nits</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in LED Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="assets/images/acrylic_signboard.png" alt="Running LED Sign Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Running LED Sign Board</h3><p class="product-description">Scrolling message display for announcements and promotions with programmable content.</p><div class="product-features"><span class="feature-tag">Scrolling</span><span class="feature-tag">Programmable</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Running LED Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><span class="product-badge">Vibrant</span><img src="assets/images/acrylic_led_letters.png" alt="Multi Colour Sign Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Multi Colour Sign Board</h3><p class="product-description">Full-color LED display with stunning visual effects and HD quality.</p><div class="product-features"><span class="feature-tag">Full Color</span><span class="feature-tag">HD Quality</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Multi Colour Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><span class="product-badge">Premium</span><img src="assets/images/video_wall_display.png" alt="Video Wall" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Video Wall</h3><p class="product-description">Seamless video wall for large-scale presentations and digital signage.</p><div class="product-features"><span class="feature-tag">Seamless</span><span class="feature-tag">4K Support</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Video Wall" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="assets/images/p10_outdoor_led_display.png" alt="Digital Standee" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Digital Standee</h3><p class="product-description">Portable digital display for retail stores, exhibitions, and events.</p><div class="product-features"><span class="feature-tag">Portable</span><span class="feature-tag">Interactive</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Digital Standee" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="assets/images/taxi_top_led_display.png" alt="Digital Sign Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Digital Sign Board</h3><p class="product-description">Modern digital signage with customizable content and remote management.</p><div class="product-features"><span class="feature-tag">Customizable</span><span class="feature-tag">Remote Control</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Digital Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWmDp7SmiwrY8XedYaiE2ufsS0RlSfhf_BvQ&s" alt="Digital Branding Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Digital Branding Board</h3><p class="product-description">Complete digital branding solution for buildings and corporate offices.</p><div class="product-features"><span class="feature-tag">Large Format</span><span class="feature-tag">Durable</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Digital Branding Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="assets/images/p4_indoor_led_screen.png" alt="Digital Advertisement Board" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>Digital Advertisement Board</h3><p class="product-description">High-visibility outdoor advertising board with dynamic content capabilities.</p><div class="product-features"><span class="feature-tag">High Visibility</span><span class="feature-tag">Dynamic</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Digital Advertisement Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+        <div class="product-card" data-category="led-digital" data-aos="fade-up">
+            <div class="product-image-container"><img src="assets/images/flexible_led_screen.png" alt="LED Alphabets" class="product-image"></div>
+            <div class="product-info"><div class="product-category">LED & Digital</div><h3>LED Alphabets</h3><p class="product-description">Custom LED letter signage for shop names and brand identity.</p><div class="product-features"><span class="feature-tag">Custom</span><span class="feature-tag">3D Letters</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in LED Alphabets" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div>
+        </div>
+    </div>
+
+    <!-- Sign Boards Category -->
+    <div class="category-header" data-category="sign-boards">
+        <h2>Sign Boards</h2>
+        <p style="color: #9ca3af;">Premium quality sign boards for business branding</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Premium</span><img src="assets/images/3d_acrylic_letters.png" alt="Acrylic Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>Acrylic Sign Board</h3><p class="product-description">Elegant acrylic signage for corporate offices.</p><div class="product-features"><span class="feature-tag">Premium</span><span class="feature-tag">Elegant</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Acrylic Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Popular</span><img src="assets/images/backlit_glow_signboard.png" alt="Glow Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>Glow Sign Board</h3><p class="product-description">Illuminated glow signage for 24/7 visibility.</p><div class="product-features"><span class="feature-tag">24/7 Visibility</span><span class="feature-tag">Bright</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Glow Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/frontlit_signboard.png" alt="Backlit Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>Backlit Sign Board</h3><p class="product-description">Professional backlit signage with even illumination.</p><div class="product-features"><span class="feature-tag">Even Lighting</span><span class="feature-tag">Professional</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Backlit Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/metal_signboard.png" alt="Metal Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>Metal Sign Board</h3><p class="product-description">Heavy-duty metal signage built to last.</p><div class="product-features"><span class="feature-tag">Heavy Duty</span><span class="feature-tag">Durable</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Metal Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Premium</span><img src="assets/images/stainless_steel_signboard.png" alt="SS Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>SS (Stainless Steel) Sign Board</h3><p class="product-description">Premium stainless steel signage with mirror finish.</p><div class="product-features"><span class="feature-tag">Rust Proof</span><span class="feature-tag">Premium</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in SS Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="sign-boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/clipon_frame_signboard.png" alt="Clip-On Sign Board" class="product-image"></div><div class="product-info"><div class="product-category">Sign Boards</div><h3>Clip-On Sign Board</h3><p class="product-description">Easy-to-install clip-on signage system.</p><div class="product-features"><span class="feature-tag">Easy Install</span><span class="feature-tag">Versatile</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Clip-On Sign Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+
+    <!-- Safety Signage Category -->
+    <div class="category-header" data-category="safety">
+        <h2>Safety & Direction Signage</h2>
+        <p style="color: #9ca3af;">Essential safety signs and directional signage</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-category="safety" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Essential</span><img src="assets/images/fireexit_safety_signboard.png" alt="Fire Exit Board" class="product-image"></div><div class="product-info"><div class="product-category">Safety Signage</div><h3>Fire Exit Board</h3><p class="product-description">Compliant fire exit signage for emergency evacuation.</p><div class="product-features"><span class="feature-tag">Safety Compliant</span><span class="feature-tag">Glow in Dark</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Fire Exit Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="safety" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/caution_warning_signboard.png" alt="Road Signages" class="product-image"></div><div class="product-info"><div class="product-category">Safety Signage</div><h3>Road Signages</h3><p class="product-description">Standard road safety signs for traffic management.</p><div class="product-features"><span class="feature-tag">Traffic Safety</span><span class="feature-tag">Weather Resistant</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Road Signages" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="safety" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/reflective_traffic_signs.png" alt="Retro Reflective Signs" class="product-image"></div><div class="product-info"><div class="product-category">Safety Signage</div><h3>Retro Reflective Signs</h3><p class="product-description">High-visibility reflective signs for night safety.</p><div class="product-features"><span class="feature-tag">High Visibility</span><span class="feature-tag">Reflective</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Retro Reflective Signs" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="safety" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Advanced</span><img src="assets/images/photolumiscent_glow_signs.png" alt="Auto Glow Signs" class="product-image"></div><div class="product-info"><div class="product-category">Safety Signage</div><h3>Auto Glow Signs</h3><p class="product-description">Self-luminous safety signs that glow without electricity.</p><div class="product-features"><span class="feature-tag">Self Luminous</span><span class="feature-tag">No Power Needed</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Auto Glow Signs" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+
+    <!-- Boards & Displays Category -->
+    <div class="category-header" data-category="boards">
+        <h2>Boards & Display Products</h2>
+        <p style="color: #9ca3af;">Premium writing boards and decorative displays</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Modern</span><img src="assets/images/non_magnetic_whiteboard.png" alt="Glass Writing Board" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>Glass Writing Board</h3><p class="product-description">Modern tempered glass whiteboard with sleek design.</p><div class="product-features"><span class="feature-tag">Tempered Glass</span><span class="feature-tag">Easy Clean</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Glass Writing Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Premium</span><img src="assets/images/frameless_glass_whiteboard.png" alt="Magnetic Glass Writing Board" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>Magnetic Glass Writing Board</h3><p class="product-description">Premium magnetic glass board for modern offices.</p><div class="product-features"><span class="feature-tag">Magnetic</span><span class="feature-tag">Premium</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Magnetic Glass Writing Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/grid_graph_whiteboard.png" alt="Graph Board" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>Graph Board</h3><p class="product-description">Whiteboard with printed graph grid for precision work.</p><div class="product-features"><span class="feature-tag">Grid Pattern</span><span class="feature-tag">Educational</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Graph Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/framed_canvas_painting.png" alt="Pin Board" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>Pin Board</h3><p class="product-description">Cork and fabric pin boards for notices and displays.</p><div class="product-features"><span class="feature-tag">Notice Display</span><span class="feature-tag">Custom Frame</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Pin Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Innovative</span><img src="assets/images/modern_abstract_art_frame.png" alt="LED Writing Board" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>LED Writing Board</h3><p class="product-description">Illuminated LED writing board with neon effect.</p><div class="product-features"><span class="feature-tag">LED Illuminated</span><span class="feature-tag">Eye-Catching</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in LED Writing Board" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Luxury</span><img src="assets/images/motivational_office_quotes.png" alt="Decorative LED Mirrors" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>Decorative LED Mirrors</h3><p class="product-description">Elegant LED-lit decorative mirrors for luxury interiors.</p><div class="product-features"><span class="feature-tag">LED Backlit</span><span class="feature-tag">Luxury</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in Decorative LED Mirrors" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><img src="assets/images/premium_gold_border_mirror.png" alt="LED Fancy Mirror" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>LED Fancy Mirror</h3><p class="product-description">Stylish LED mirrors with color-changing options.</p><div class="product-features"><span class="feature-tag">Color Changing</span><span class="feature-tag">Smart Features</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in LED Fancy Mirror" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+        <div class="product-card" data-category="boards" data-aos="fade-up"><div class="product-image-container"><span class="product-badge">Custom</span><img src="assets/images/led_backlight_smart_mirror.png" alt="LED Designer Mirror" class="product-image"></div><div class="product-info"><div class="product-category">Boards & Displays</div><h3>LED Designer Mirror</h3><p class="product-description">Custom-designed LED mirrors with artistic frames.</p><div class="product-features"><span class="feature-tag">Custom Design</span><span class="feature-tag">Bespoke</span></div><a href="https://wa.me/918384858678?text=Hi, I'm interested in LED Designer Mirror" class="btn-quote" target="_blank">Get Quote <i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo"><img src="/assets/images/logo.png" alt="Mr. Fixon" style="height: 45px;"></a>
+                <p class="footer-description">India's most trusted brand for LED displays, acrylic products, and premium whiteboards since 1996. Serving 5000+ happy clients across the nation.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html?category=led">LED Displays</a></li>
+                    <li><a href="products.html?category=acrylic">Acrylic Products</a></li>
+                    <li><a href="products.html?category=whiteboard">Whiteboards</a></li>
+                    <li><a href="products.html?category=accessories">Accessories</a></li>
+                    <li><a href="products.html?category=custom">Custom Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +91 83848 58678</li>
+                    <li><i class="fas fa-envelope"></i> info@mrfixon.com</li>
+                    <li><i class="fas fa-envelope"></i> sales@mrfixon.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mr. Fixon. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> in India | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918384858678" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+    if (closeMenu) closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) backToTop.classList.add('visible');
+        else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const filterValue = button.getAttribute('data-filter');
+            productCards.forEach(card => {
+                card.style.display = (filterValue === 'all' || card.getAttribute('data-category') === filterValue) ? 'block' : 'none';
+            });
+            categoryHeaders.forEach(header => {
+                header.style.display = (filterValue === 'all' || header.getAttribute('data-category') === filterValue) ? 'block' : 'none';
+            });
+        });
+    });
+
+    // Search functionality
+    document.getElementById('productSearch').addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        productCards.forEach(card => {
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('.product-description')?.textContent.toLowerCase() || '';
+            card.style.display = (title.includes(searchTerm) || description.includes(searchTerm)) ? 'block' : 'none';
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        else navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+    });
+</script>
+</body>
+</html>
