@@ -1,0 +1,22 @@
+{
+  "title": "P4 Indoor LED Display Screen",
+  "slug": "p4-indoor-led-screen",
+  "category": "led-digital",
+  "badge": "High Definition",
+  "featured": true,
+  "image": "/assets/images/p4_indoor_led_screen.png",
+  "description": "Ultra-fine pitch indoor LED video wall for corporate boardrooms, studios, shopping malls, and event auditoriums with vibrant color contrast.",
+  "features": [
+    "High Refresh Rate (≥3840Hz)",
+    "Die-Cast Aluminum Lightweight Cabinet",
+    "Seamless Magnetic Module Servicing",
+    "High Contrast & Color Uniformity"
+  ],
+  "specs": [
+    { "label": "Pixel Pitch", "value": "4.0 mm" },
+    { "label": "Brightness", "value": "≥1000 nits" },
+    { "label": "Viewing Angle", "value": "140°/140° (H/V)" },
+    { "label": "Lifespan", "value": "100,000+ Hours" }
+  ],
+  "warranty": "2 Years On-Site Warranty"
+}

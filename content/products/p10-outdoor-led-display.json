@@ -1,0 +1,22 @@
+{
+  "title": "P10 Outdoor LED Display Billboard",
+  "slug": "p10-outdoor-led-display",
+  "category": "led-digital",
+  "badge": "Weatherproof IP65",
+  "featured": true,
+  "image": "/assets/images/p10_outdoor_led_display.png",
+  "description": "Heavy-duty outdoor digital billboard engineered for highway advertising, building facades, and commercial plazas with high daylight visibility.",
+  "features": [
+    "IP65 Front & Rear Waterproof Rating",
+    "Ultra-Bright Daylight Readable (≥6500 nits)",
+    "Energy-Efficient Power Supply",
+    "Remote Cloud Content Control"
+  ],
+  "specs": [
+    { "label": "Pixel Pitch", "value": "10.0 mm" },
+    { "label": "Brightness", "value": "≥6500 nits" },
+    { "label": "Cabinet Material", "value": "Iron / Aluminum Waterproof" },
+    { "label": "Working Temp", "value": "-20°C to +60°C" }
+  ],
+  "warranty": "3 Years Warranty"
+}

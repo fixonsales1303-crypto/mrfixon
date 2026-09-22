@@ -1,0 +1,157 @@
+# ==========================================
+# Mr. Fixon - Git CMS Configuration
+# Compatible with Sveltia CMS and Decap CMS
+# ==========================================
+
+backend:
+  name: github
+  repo: Prince-Vaviya/mrfixon
+  branch: main
+  base_url: https://sveltia-cms-auth.vercel.app
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+display_url: "https://www.mrfixon.com"
+logo_url: "/assets/images/logo.png"
+
+# Collections Definition
+collections:
+  # ----------------------------------------------------
+  # 1. PRODUCTS COLLECTION
+  # ----------------------------------------------------
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    folder: "content/products"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Product Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Unique URL safe ID, e.g. p4-indoor-led-screen" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "LED & Digital Displays", value: "led-digital" }
+          - { label: "Acrylic Products & Signages", value: "acrylic" }
+          - { label: "Premium Whiteboards & Glass Boards", value: "boards" }
+          - { label: "Safety & Traffic Signages", value: "safety" }
+          - { label: "Art Frames & Decorative Mirrors", value: "decor" }
+      - { label: "Badge / Tag", name: "badge", widget: "string", required: false, hint: "e.g., Best Seller, Trending, Industrial Grade" }
+      - { label: "Featured on Homepage", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Product Image", name: "image", widget: "image" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - label: "Key Features"
+        name: "features"
+        widget: "list"
+        required: false
+        field: { label: "Feature", name: "feature", widget: "string" }
+      - label: "Technical Specifications"
+        name: "specs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Specification Name", name: "label", widget: "string" }
+          - { label: "Specification Value", name: "value", widget: "string" }
+      - { label: "Warranty / Assurance", name: "warranty", widget: "string", default: "2 Years Warranty", required: false }
+
+  # ----------------------------------------------------
+  # 2. PROJECTS / PORTFOLIO
+  # ----------------------------------------------------
+  - name: "projects"
+    label: "Projects & Portfolio"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Client Name", name: "client", widget: "string" }
+      - { label: "Location / City", name: "location", widget: "string", hint: "e.g. Mumbai, Pune, Bangalore" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "LED Installation", value: "led" }
+          - { label: "Acrylic & Corporate Signage", value: "signage" }
+          - { label: "Corporate Whiteboards", value: "whiteboards" }
+          - { label: "Commercial Facade", value: "commercial" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Completion Date", name: "completionDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Project Summary", name: "summary", widget: "text" }
+      - label: "Gallery Photos"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Photo", name: "photo", widget: "image" }
+
+  # ----------------------------------------------------
+  # 3. GALLERY COLLECTION
+  # ----------------------------------------------------
+  - name: "gallery"
+    label: "Visual Gallery"
+    label_singular: "Gallery Item"
+    folder: "content/gallery"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Title / Caption", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Factory & Infrastructure", value: "infrastructure" }
+          - { label: "LED Displays", value: "led" }
+          - { label: "Acrylic Works", value: "acrylic" }
+          - { label: "Whiteboards", value: "whiteboards" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+
+  # ----------------------------------------------------
+  # 4. BLOG & ARTICLES
+  # ----------------------------------------------------
+  - name: "blog"
+    label: "Blog & Insights"
+    label_singular: "Blog Post"
+    folder: "content/blogs"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Post Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Author", name: "author", widget: "string", default: "Mr. Fixon Editorial Team" }
+      - { label: "Category", name: "category", widget: "string", default: "Display Technology" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Excerpt / Short Summary", name: "excerpt", widget: "text" }
+      - { label: "Article Content", name: "body", widget: "markdown" }
+
+  # ----------------------------------------------------
+  # 5. SITE SETTINGS (FILE COLLECTION)
+  # ----------------------------------------------------
+  - name: "settings"
+    label: "Site Settings & Contact Info"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings.json"
+        format: "json"
+        fields:
+          - { label: "Company Name", name: "companyName", widget: "string", default: "Mr. Fixon" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Premium LED Displays, Acrylic & Whiteboard Solutions" }
+          - { label: "Primary Phone", name: "primaryPhone", widget: "string", default: "+91-8384858678" }
+          - { label: "Secondary Phone", name: "secondaryPhone", widget: "string", default: "+91-9820000000", required: false }
+          - { label: "WhatsApp Number", name: "whatsappNumber", widget: "string", default: "+91-8384858678" }
+          - { label: "Email Address", name: "email", widget: "string", default: "info@mrfixon.com" }
+          - { label: "Office Address", name: "address", widget: "text", default: "Mumbai, Maharashtra, India" }
+          - { label: "Working Hours", name: "workingHours", widget: "string", default: "Mon - Sat: 9:30 AM - 7:30 PM" }

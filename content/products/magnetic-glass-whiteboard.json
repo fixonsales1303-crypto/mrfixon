@@ -1,0 +1,22 @@
+{
+  "title": "Magnetic Frameless Glass Whiteboard",
+  "slug": "magnetic-glass-whiteboard",
+  "category": "boards",
+  "badge": "Scratch Resistant",
+  "featured": true,
+  "image": "/assets/images/magnetic_glass_whiteboard.png",
+  "description": "Ultra-modern 4mm toughened safety glass writing board with rare-earth magnetic backing and polished chamfered edges for executive boardrooms.",
+  "features": [
+    "4mm Toughened Safety Glass (Non-Porous)",
+    "Ghost-Free Writing & Zero Staining",
+    "Super-Strong Neodymium Magnetic Compatibility",
+    "Concealed Stainless Steel Standoff Mounts"
+  ],
+  "specs": [
+    { "label": "Surface", "value": "Tempered Safety Glass" },
+    { "label": "Standard Sizes", "value": "3x2 ft, 4x3 ft, 6x4 ft, 8x4 ft" },
+    { "label": "Mounting", "value": "Chrome / Matte Black Standoffs" },
+    { "label": "Maintenance", "value": "Dry Wipe / Standard Glass Cleaner" }
+  ],
+  "warranty": "Lifetime Surface Warranty"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "3D Acrylic LED Backlit Letters",
+  "slug": "3d-acrylic-led-letters",
+  "category": "acrylic",
+  "badge": "Premium Finish",
+  "featured": true,
+  "image": "/assets/images/3d_acrylic_letters.png",
+  "description": "Architectural grade 3D laser-cut acrylic signage letters with halo backlight effect, ideal for corporate receptions and luxury retail branding.",
+  "features": [
+    "Imported Cast Acrylic (Grade A)",
+    "Samsung / Osram High CRI LED Modules",
+    "Laser Cut Precision (0.1mm tolerance)",
+    "Customizable Paint / Metallic Finishes"
+  ],
+  "specs": [
+    { "label": "Material", "value": "100% Virgin Cast Acrylic" },
+    { "label": "Thickness Range", "value": "10mm to 50mm" },
+    { "label": "Illumination", "value": "Backlit / Frontlit / Side-glow" },
+    { "label": "Voltage", "value": "12V DC IP67 Waterproof SMPS" }
+  ],
+  "warranty": "2 Years Electrical Warranty"
+}
