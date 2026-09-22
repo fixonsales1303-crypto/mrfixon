@@ -9,7 +9,7 @@ backend:
   name: github
   repo: fixonsales1303-crypto/mrfixon
   branch: main
-  base_url: https://mrfixon.vercel.app # Replace with your vercel.app domain or custom domain
+  base_url: https://mrfixon.com
   auth_endpoint: api/auth
 
 media_folder: "assets/images"
