@@ -4,7 +4,7 @@
   "category": "acrylic",
   "badge": "Premium Finish",
   "featured": true,
-  "image": "/assets/images/3d_acrylic_letters.png",
+  "image": "/assets/images/3d-rectangle-outdoor-acrylic-led-sign-board-hevy20230817070222.jpg",
   "description": "Architectural grade 3D laser-cut acrylic signage letters with halo backlight effect, ideal for corporate receptions and luxury retail branding.",
   "features": [
     "Imported Cast Acrylic (Grade A)",
@@ -13,10 +13,22 @@
     "Customizable Paint / Metallic Finishes"
   ],
   "specs": [
-    { "label": "Material", "value": "100% Virgin Cast Acrylic" },
-    { "label": "Thickness Range", "value": "10mm to 50mm" },
-    { "label": "Illumination", "value": "Backlit / Frontlit / Side-glow" },
-    { "label": "Voltage", "value": "12V DC IP67 Waterproof SMPS" }
+    {
+      "label": "Material",
+      "value": "100% Virgin Cast Acrylic"
+    },
+    {
+      "label": "Thickness Range",
+      "value": "10mm to 50mm"
+    },
+    {
+      "label": "Illumination",
+      "value": "Backlit / Frontlit / Side-glow"
+    },
+    {
+      "label": "Voltage",
+      "value": "12V DC IP67 Waterproof SMPS"
+    }
   ],
   "warranty": "2 Years Electrical Warranty"
 }
