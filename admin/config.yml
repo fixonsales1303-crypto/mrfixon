@@ -3,11 +3,14 @@
 # Compatible with Sveltia CMS and Decap CMS
 # ==========================================
 
+local_backend: true # Allows local file editing when running npx decap-server or local proxy
+
 backend:
   name: github
-  repo: Prince-Vaviya/mrfixon
+  repo: fixonsales1303-crypto/mrfixon
   branch: main
-  base_url: https://sveltia-cms-auth.vercel.app
+  base_url: https://mrfixon.vercel.app # Replace with your vercel.app domain or custom domain
+  auth_endpoint: api/auth
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
