@@ -6,7 +6,6 @@ const ContentLoader = {
     repo: 'fixonsales1303-crypto/mrfixon',
     branch: 'main',
 
-    // Known default files (fallback if GitHub API rate limited)
     defaultCategories: [
         'led-digital.json',
         'sign-boards.json',
@@ -58,6 +57,17 @@ const ContentLoader = {
     },
 
     /**
+     * Normalize strings for comparisons and slug matching
+     */
+    slugify(str) {
+        if (!str) return '';
+        return str.toString().toLowerCase().trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-');
+    },
+
+    /**
      * Discover and load all categories & products
      */
     async loadCategoriesAndProducts() {
@@ -74,7 +84,6 @@ const ContentLoader = {
                 }
             } catch (_) {}
 
-            // Load Category JSON contents
             const catPromises = categoryFiles.map(file => 
                 fetch(`/content/categories/${file}?t=${Date.now()}`)
                     .then(r => r.ok ? r.json() : null)
@@ -94,7 +103,6 @@ const ContentLoader = {
                 }
             } catch (_) {}
 
-            // Load Product JSON contents
             const prodPromises = productFiles.map(file => 
                 fetch(`/content/products/${file}?t=${Date.now()}`)
                     .then(r => r.ok ? r.json() : null)
@@ -102,7 +110,7 @@ const ContentLoader = {
             );
             this.products = (await Promise.all(prodPromises)).filter(Boolean);
 
-            // 3. Render Dynamic Category Pills & New Products
+            // 3. Render Dynamic Category Pills & Products
             this.renderCategoryPills();
             this.renderAndSyncProducts();
         } catch (e) {
@@ -111,18 +119,38 @@ const ContentLoader = {
     },
 
     /**
-     * Dynamically update Category Pills
+     * Dynamically render Category Filter Pills
      */
     renderCategoryPills() {
         const filterContainer = document.querySelector('.filter-buttons');
-        if (!filterContainer || this.categories.length === 0) return;
+        if (!filterContainer) return;
 
-        // Keep 'All Products' button
         let html = `<button class="filter-btn active" data-filter="all">All Products</button>`;
 
-        this.categories.forEach(cat => {
-            const slug = cat.slug || cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-            html += `<button class="filter-btn" data-filter="${slug}">${cat.title}</button>`;
+        // Map existing static categories to ensure exact slug match
+        const staticCategories = [
+            { title: 'LED & Digital', slug: 'led-digital' },
+            { title: 'Sign Boards', slug: 'sign-boards' },
+            { title: 'Safety Signage', slug: 'safety' },
+            { title: 'Boards & Displays', slug: 'boards' }
+        ];
+
+        // Merge loaded CMS categories
+        const allCategories = [...staticCategories];
+
+        this.categories.forEach(cmsCat => {
+            const cmsSlug = this.slugify(cmsCat.slug || cmsCat.title);
+            const exists = allCategories.some(c => c.slug === cmsSlug || this.slugify(c.title) === this.slugify(cmsCat.title));
+            if (!exists) {
+                allCategories.push({
+                    title: cmsCat.title,
+                    slug: cmsSlug
+                });
+            }
+        });
+
+        allCategories.forEach(cat => {
+            html += `<button class="filter-btn" data-filter="${cat.slug}">${cat.title}</button>`;
         });
 
         filterContainer.innerHTML = html;
@@ -139,7 +167,7 @@ const ContentLoader = {
         this.products.forEach(cmsItem => {
             if (!cmsItem || !cmsItem.title) return;
 
-            const categorySlug = cmsItem.category || 'led-digital';
+            const categorySlug = this.slugify(cmsItem.category || 'led-digital');
             
             // Check if product card already exists
             let matchedCard = document.querySelector(`.product-card[data-slug="${cmsItem.slug}"]`);
@@ -172,12 +200,12 @@ const ContentLoader = {
                 let categoryGrid = document.querySelector(`.category-header[data-category="${categorySlug}"] + .products-grid`);
                 
                 if (!categoryGrid) {
-                    // Create new category section dynamically!
-                    const catObj = this.categories.find(c => c.slug === categorySlug) || { title: categorySlug };
+                    // Create new category section dynamically
+                    const catObj = this.categories.find(c => this.slugify(c.slug || c.title) === categorySlug) || { title: cmsItem.category };
                     const sectionHtml = `
                         <div class="category-header" data-category="${categorySlug}" data-aos="fade-up">
                             <h2>${catObj.title}</h2>
-                            <p style="color: #9ca3af;">Premium solutions for ${catObj.title}</p>
+                            <p style="color: #9ca3af;">Premium customized solutions for ${catObj.title}</p>
                         </div>
                         <div class="products-grid"></div>
                     `;
@@ -211,7 +239,7 @@ const ContentLoader = {
     },
 
     getCategoryTitle(slug) {
-        const found = this.categories.find(c => c.slug === slug);
+        const found = this.categories.find(c => this.slugify(c.slug || c.title) === slug);
         return found ? found.title : slug;
     },
 
@@ -231,12 +259,12 @@ const ContentLoader = {
                 const filterValue = button.getAttribute('data-filter');
 
                 productCards.forEach(card => {
-                    const cardCat = card.getAttribute('data-category');
+                    const cardCat = ContentLoader.slugify(card.getAttribute('data-category'));
                     card.style.display = (filterValue === 'all' || cardCat === filterValue) ? 'block' : 'none';
                 });
 
                 categoryHeaders.forEach(header => {
-                    const headerCat = header.getAttribute('data-category');
+                    const headerCat = ContentLoader.slugify(header.getAttribute('data-category'));
                     header.style.display = (filterValue === 'all' || headerCat === filterValue) ? 'block' : 'none';
                 });
             };
