@@ -35,15 +35,12 @@ collections:
       - { label: "Slug", name: "slug", widget: "string", hint: "Unique URL safe ID, e.g. p4-indoor-led-screen" }
       - label: "Category"
         name: "category"
-        widget: "select"
-        options:
-          - { label: "LED & Digital Displays", value: "led-digital" }
-          - { label: "Acrylic Products & Signages", value: "acrylic" }
-          - { label: "Premium Whiteboards & Glass Boards", value: "boards" }
-          - { label: "Safety & Traffic Signages", value: "safety" }
-          - { label: "Art Frames & Decorative Mirrors", value: "decor" }
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["title", "slug"]
+        value_field: "slug"
+        display_fields: ["title"]
       - { label: "Badge / Tag", name: "badge", widget: "string", required: false, hint: "e.g., Best Seller, Trending, Industrial Grade" }
-      - { label: "Featured on Homepage", name: "featured", widget: "boolean", default: false, required: false }
       - { label: "Product Image", name: "image", widget: "image" }
       - { label: "Short Description", name: "description", widget: "text" }
       - label: "Key Features"
@@ -61,7 +58,22 @@ collections:
       - { label: "Warranty / Assurance", name: "warranty", widget: "string", default: "2 Years Warranty", required: false }
 
   # ----------------------------------------------------
-  # 2. PROJECTS / PORTFOLIO
+  # 2. CATEGORIES COLLECTION (ADD / DELETE CATEGORIES)
+  # ----------------------------------------------------
+  - name: "categories"
+    label: "Product Categories"
+    label_singular: "Category"
+    folder: "content/categories"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Category Name", name: "title", widget: "string" }
+      - { label: "Category Slug / ID", name: "slug", widget: "string", hint: "e.g. led-digital, sign-boards, safety, boards" }
+
+  # ----------------------------------------------------
+  # 3. PROJECTS / PORTFOLIO
   # ----------------------------------------------------
   - name: "projects"
     label: "Projects & Portfolio"
@@ -94,7 +106,7 @@ collections:
         field: { label: "Photo", name: "photo", widget: "image" }
 
   # ----------------------------------------------------
-  # 3. GALLERY COLLECTION
+  # 4. GALLERY COLLECTION
   # ----------------------------------------------------
   - name: "gallery"
     label: "Visual Gallery"
@@ -119,7 +131,7 @@ collections:
       - { label: "Description", name: "description", widget: "string", required: false }
 
   # ----------------------------------------------------
-  # 4. BLOG & ARTICLES
+  # 5. BLOG & ARTICLES
   # ----------------------------------------------------
   - name: "blog"
     label: "Blog & Insights"
@@ -140,7 +152,7 @@ collections:
       - { label: "Article Content", name: "body", widget: "markdown" }
 
   # ----------------------------------------------------
-  # 5. SITE SETTINGS (FILE COLLECTION)
+  # 6. SITE SETTINGS (FILE COLLECTION)
   # ----------------------------------------------------
   - name: "settings"
     label: "Site Settings & Contact Info"
