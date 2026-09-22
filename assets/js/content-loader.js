@@ -3,24 +3,19 @@
 // =========================================================================
 
 const ContentLoader = {
-    // List of known content items (updated automatically or fetched)
     products: [
+        '/content/products/3d-acrylic-led-letters.json',
         '/content/products/p4-indoor-led-screen.json',
         '/content/products/p10-outdoor-led-display.json',
-        '/content/products/3d-acrylic-led-letters.json',
         '/content/products/magnetic-glass-whiteboard.json'
     ],
-    
     settingsUrl: '/content/settings.json',
 
-    /**
-     * Initialize content loading
-     */
     async init() {
-        await this.loadSettings();
-        if (document.getElementById('dynamic-products-container') || document.querySelector('.products-grid')) {
-            await this.loadProducts();
-        }
+        await Promise.all([
+            this.loadSettings(),
+            this.syncProducts()
+        ]);
     },
 
     /**
@@ -28,11 +23,10 @@ const ContentLoader = {
      */
     async loadSettings() {
         try {
-            const res = await fetch(this.settingsUrl);
+            const res = await fetch(this.settingsUrl + '?t=' + Date.now());
             if (!res.ok) return;
             const settings = await res.json();
 
-            // Update elements with data-cms-bind attribute
             document.querySelectorAll('[data-cms-bind]').forEach(el => {
                 const key = el.getAttribute('data-cms-bind');
                 if (settings[key]) {
@@ -47,76 +41,98 @@ const ContentLoader = {
                 }
             });
         } catch (e) {
-            console.debug('CMS settings load skipped (using static defaults):', e);
+            console.debug('CMS settings load error:', e);
         }
     },
 
     /**
-     * Load and render CMS products
+     * Synchronize CMS products with HTML cards on the page
      */
-    async loadProducts() {
-        const container = document.getElementById('dynamic-products-container');
-        if (!container) return;
+    async syncProducts() {
+        const productCards = document.querySelectorAll('.product-card');
+        if (!productCards || productCards.length === 0) return;
 
         try {
-            const productPromises = this.products.map(url => fetch(url).then(r => r.ok ? r.json() : null));
-            const products = (await Promise.all(productPromises)).filter(Boolean);
+            const fetchPromises = this.products.map(url => 
+                fetch(url + '?t=' + Date.now())
+                    .then(r => r.ok ? r.json() : null)
+                    .catch(() => null)
+            );
 
-            if (products.length === 0) return;
+            const cmsProducts = (await Promise.all(fetchPromises)).filter(Boolean);
+            if (cmsProducts.length === 0) return;
 
-            // Render dynamic cards
-            container.innerHTML = products.map(product => this.renderProductCard(product)).join('');
+            cmsProducts.forEach(cmsItem => {
+                if (!cmsItem || !cmsItem.title) return;
+
+                // Find matching card by data-slug or by title similarity
+                let matchedCard = null;
+
+                if (cmsItem.slug) {
+                    matchedCard = document.querySelector(`.product-card[data-slug="${cmsItem.slug}"]`);
+                }
+
+                if (!matchedCard) {
+                    // Try matching by card title
+                    productCards.forEach(card => {
+                        const cardTitle = card.querySelector('h3')?.textContent?.trim().toLowerCase() || '';
+                        const cmsTitle = cmsItem.title.toLowerCase();
+                        
+                        // Exact match or partial keyword match (e.g. "acrylic sign board" vs "3d acrylic led backlit letters")
+                        if (
+                            cardTitle === cmsTitle ||
+                            (cardTitle.includes('acrylic') && cmsTitle.includes('acrylic')) ||
+                            (cardTitle.includes('p4') && cmsTitle.includes('p4')) ||
+                            (cardTitle.includes('p10') && cmsTitle.includes('p10')) ||
+                            (cardTitle.includes('glass') && cmsTitle.includes('glass'))
+                        ) {
+                            if (!matchedCard) matchedCard = card;
+                        }
+                    });
+                }
+
+                if (matchedCard) {
+                    // Update Image
+                    const imgEl = matchedCard.querySelector('img.product-image') || matchedCard.querySelector('img');
+                    if (imgEl && cmsItem.image) {
+                        imgEl.src = cmsItem.image;
+                        imgEl.alt = cmsItem.title;
+                    }
+
+                    // Update Badge if provided
+                    if (cmsItem.badge) {
+                        let badgeEl = matchedCard.querySelector('.product-badge');
+                        if (!badgeEl) {
+                            badgeEl = document.createElement('span');
+                            badgeEl.className = 'product-badge';
+                            const imgContainer = matchedCard.querySelector('.product-image-container') || matchedCard;
+                            imgContainer.prepend(badgeEl);
+                        }
+                        badgeEl.textContent = cmsItem.badge;
+                    }
+
+                    // Update Description
+                    const descEl = matchedCard.querySelector('.product-description');
+                    if (descEl && cmsItem.description) {
+                        descEl.textContent = cmsItem.description;
+                    }
+
+                    // Update Title
+                    const titleEl = matchedCard.querySelector('h3');
+                    if (titleEl && cmsItem.title) {
+                        titleEl.textContent = cmsItem.title;
+                    }
+                }
+            });
         } catch (e) {
-            console.debug('CMS products load skipped (using static HTML):', e);
+            console.error('Error syncing CMS products:', e);
         }
-    },
-
-    /**
-     * Generate HTML for a product card matching Mr. Fixon design
-     */
-    renderProductCard(product) {
-        const badgeHtml = product.badge 
-            ? `<div class="product-badge">${product.badge}</div>` 
-            : '';
-
-        const featuresHtml = product.features && product.features.length 
-            ? `<div class="product-features">
-                 ${product.features.slice(0, 3).map(f => `<span class="feature-tag"><i class="fas fa-check-circle"></i> ${f}</span>`).join('')}
-               </div>`
-            : '';
-
-        return `
-        <div class="product-card" data-category="${product.category || 'led-digital'}" data-aos="fade-up">
-            <div class="product-image-container">
-                <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">
-                ${badgeHtml}
-            </div>
-            <div class="product-content">
-                <span class="product-category">${this.getCategoryLabel(product.category)}</span>
-                <h3>${product.title}</h3>
-                <p class="product-description">${product.description || ''}</p>
-                ${featuresHtml}
-                <div class="product-footer">
-                    <a href="/contact.html?product=${encodeURIComponent(product.title)}" class="btn-quote">
-                        <i class="fas fa-envelope"></i> Request Quote
-                    </a>
-                </div>
-            </div>
-        </div>
-        `;
-    },
-
-    getCategoryLabel(categoryKey) {
-        const map = {
-            'led-digital': 'LED & Digital Displays',
-            'acrylic': 'Acrylic Signages',
-            'boards': 'Premium Whiteboards',
-            'safety': 'Safety Signage',
-            'decor': 'Decorative Mirrors'
-        };
-        return map[categoryKey] || 'Display Solutions';
     }
 };
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => ContentLoader.init());
+// Initialize as soon as DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => ContentLoader.init());
+} else {
+    ContentLoader.init();
+}
