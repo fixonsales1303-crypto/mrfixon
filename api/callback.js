@@ -30,27 +30,47 @@ export default async function handler(req, res) {
     const token = data.access_token;
     const provider = 'github';
 
-    // Script to post token to the CMS window
     const content = `
       <!DOCTYPE html>
       <html>
-      <head><title>Authorizing...</title></head>
+      <head>
+        <meta charset="utf-8">
+        <title>Authorizing...</title>
+      </head>
       <body>
+        <p style="font-family: sans-serif; text-align: center; margin-top: 20vh;">
+          Authorizing Mr. Fixon Admin...
+        </p>
         <script>
           (function() {
-            function receiveMessage(e) {
-              console.log("Receive message %o", e);
-              window.opener.postMessage(
-                'authorization:${provider}:success:{"token":"${token}","provider":"${provider}"}',
-                e.origin
-              );
-              window.removeEventListener("message", receiveMessage, false);
+            const tokenMsg = 'authorization:${provider}:success:{"token":"${token}","provider":"${provider}"}';
+            
+            function sendToken() {
+              if (window.opener) {
+                window.opener.postMessage(tokenMsg, '*');
+                window.opener.postMessage({ token: "${token}", provider: "${provider}" }, '*');
+              }
             }
+
+            function receiveMessage(e) {
+              sendToken();
+              window.removeEventListener("message", receiveMessage, false);
+              setTimeout(function() { window.close(); }, 300);
+            }
+
             window.addEventListener("message", receiveMessage, false);
-            window.opener.postMessage("authorizing:${provider}", "*");
+
+            if (window.opener) {
+              window.opener.postMessage("authorizing:${provider}", "*");
+              // Send token immediately as well
+              sendToken();
+              setTimeout(function() {
+                sendToken();
+                setTimeout(function() { window.close(); }, 500);
+              }, 500);
+            }
           })();
         </script>
-        <p>Authorization successful! You can close this window if it doesn't close automatically.</p>
       </body>
       </html>
     `;
